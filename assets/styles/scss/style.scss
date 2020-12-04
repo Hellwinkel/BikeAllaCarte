@@ -17,6 +17,16 @@ html {
   // $third-color: #222222;
   // $accent-color: #fa2626;
 
+  ::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: transparentize($accent-color, 0.45);
+  }
+  
+  ::selection {
+    color: white;
+    background: transparentize($accent-color, 0.45);
+  }
+
   margin: 0px;
   padding: 0px;
   font-size: 16px;
