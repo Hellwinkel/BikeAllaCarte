@@ -1,0 +1,92 @@
+.newsletter {
+  width: 100%;
+  height: 160px;
+  background: linear-gradient(to bottom right, lighten($accent-color, 5%), $accent-color);
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: center;
+
+  .newsletter-container {
+    width: 75%;
+    max-width: 1000px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+
+    p {
+      font-size: 1.75rem;
+      color: white;
+      font-weight: 500;
+      line-height: 1.25;
+      display: block;
+      max-width: 400px;
+      text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+
+      @media screen and (max-width: 1023px) {
+        font-size: 1.5rem;
+
+      }
+
+      @media screen and (max-width: 639px) {
+        margin-bottom: 30px;
+        text-align: center;
+
+        br {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 1.25rem;
+      }
+    }
+
+    form {
+      position: relative;
+      width: 50%;
+      max-width: 400px;
+      min-width: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      input[type=email] {
+        position: relative;
+        min-width: 100%;
+        border: none;
+        border-radius: 25px;
+        padding: 12px 20px;
+        outline: none;
+        font-size: 1.125rem;
+        color: #777;
+        font-style: italic;
+        box-shadow: none;
+        transition: 200ms;
+        font-weight: 100 !important;
+        
+        &:focus {
+          box-shadow: 0px 0px 15px white;
+        }
+      }
+
+      button[type=submit] {
+        position: absolute;
+        right: 0px;
+        height: 100%;
+        width: 75px;
+        border-radius: 0px 28px 28px 0px;
+        border: none;
+        background-color: #f4f4f4;
+        cursor: pointer;
+      }
+    }
+
+    @media screen and (max-width: 639px) {
+      flex-flow: column;
+    }
+  }
+}
