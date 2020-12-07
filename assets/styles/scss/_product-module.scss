@@ -251,19 +251,6 @@
     justify-content: space-between;
     position: relative;
 
-    .swiper-container {
-      margin: 0px 40px;
-      padding: 20px;
-
-      @media screen and (max-width: 639px) {
-        padding: 0px;
-      }
-
-      @media screen and (max-width: 425px) {
-        margin: 0px 0px;
-      }
-    }
-
     .swiper-arrow {
       width: 0px;
       height: 0px;
@@ -326,154 +313,218 @@
       }
     }
 
-    .swiper-slide {
-      min-width: 265px;
-      width: 265px;
-      height: 425px;
-      display: flex;
-      justify-content: center;
-      outline: none;
-      border-radius: 2px;
+    .swiper-container {
+      margin: 0px 40px;
+      padding: 20px;
 
-      @media screen and (min-width: 640px) {
-        padding: 10px;
-        transition: 75ms ease-out;
-        transition-delay: 75ms;
-        transition-property: box-shadow, opacity;
-        
-        &.blur {
-          transition-delay: 0ms;
-          opacity: 0.35;
+      @media screen and (max-width: 639px) {
+        padding: 0px;
+      }
+
+      @media screen and (max-width: 425px) {
+        margin: 0px 0px;
+      }
+
+      .swiper-slide {
+        min-width: 265px;
+        width: 265px;
+        height: 425px;
+        display: flex;
+        justify-content: center;
+        outline: none;
+        border-radius: 2px;
+  
+        @media screen and (min-width: 640px) {
+          padding: 10px;
+          transition: 75ms ease-out;
+          transition-delay: 75ms;
+          transition-property: box-shadow, opacity;
+          
+          &.blur {
+            transition-delay: 0ms;
+            opacity: 0.35;
+          }
+          
+          &:hover, &:focus {
+            transition-delay: 0ms;
+            box-shadow: 0px 0px 0px 2px transparentize($accent-color, 0.5);
+          }
         }
         
-        &:hover, &:focus {
-          transition-delay: 0ms;
-          box-shadow: 0px 0px 0px 2px transparentize($accent-color, 0.5);
+        
+        .item {
+          width: 100%;
+          max-width: 350px;
+          height: 100%;
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: space-between;
+  
+          h3.item-title {
+            font-size: 1.125rem;
+            font-weight: 400;
+            line-height: 1.4;
+            display: inline-block;
+            max-width: 290px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #222222;
+            
+            @media screen and (max-width: 425px) {
+              font-size: 1.125rem;
+              text-align: center;
+              height: 50px;
+              margin-bottom: 15px;
+            }
+          }
+  
+          .item-image {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px 10px;
+            height: 100%;
+            position: relative;
+            margin-bottom: 10px;
+            max-height: 300px;
+            max-width: 300px;
+            
+            img {
+              max-width: 90%;
+              max-height: 300px;
+              user-select: none;
+            }
+  
+            .left-badge {
+              position: absolute;
+              top: 0px;
+              left: 0px;
+  
+              img {
+                max-width: 80px;
+              }
+  
+              .free-ship {
+                padding: 5px 10px;
+                background-color: #0dc70e;
+                border-radius: 15px;
+                color: white;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                font-weight: 600;
+                user-select: none;
+              }
+            }
+  
+            .right-badge {
+              position: absolute;
+              top: 0px;
+              right: 0;
+  
+              .discount {
+                padding: 5px 10px;
+                background-color: #f9221f;
+                border-radius: 15px;
+                color: white;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+                font-weight: 600;
+                user-select: none;
+              }
+            }
+          }
+  
+          .price-container {
+            width: 100%;
+  
+            * {
+              letter-spacing: -0.01em;
+              text-align: center;
+            }
+  
+            .big {
+              font-size: 1.25em;
+              font-weight: 600;
+            }
+  
+            .accent-color {
+              color: $accent-color;
+            }
+  
+            p.original-price {
+              font-size: 0.75rem;
+              margin-bottom: 5px;
+              color: rgb(168, 168, 168);
+  
+              .striked {
+                text-decoration: line-through;
+              }
+            }
+  
+            p.discount-price {
+              font-size: 1.125rem;
+              margin-bottom: 5px;
+              color: #222;
+            }
+  
+            p.installment-price {
+              font-size: 0.875rem;
+              color: #545454;
+            }
+          }
         }
       }
-      
-      
-      .item {
-        width: 100%;
-        max-width: 350px;
-        height: 100%;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content: space-between;
 
-        h3.item-title {
-          font-size: 1.125rem;
-          font-weight: 400;
-          line-height: 1.4;
-          display: inline-block;
-          max-width: 290px;
-          word-wrap: break-word;
-          text-align: center;
-          margin-bottom: 10px;
-          color: #222222;
-          
-          @media screen and (max-width: 425px) {
-            font-size: 1.125rem;
-            text-align: center;
-            height: 50px;
-            margin-bottom: 15px;
-          }
-        }
-
-        .item-image {
-          width: 100%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 0px 10px;
-          height: 100%;
-          position: relative;
-          margin-bottom: 10px;
-          max-height: 300px;
-          max-width: 300px;
-          
-          img {
-            max-width: 90%;
-            max-height: 300px;
-            user-select: none;
+      &.small-swiper {
+        @media screen and (min-width: 350px) and (max-width: 750px) {
+          .swiper-slide {
+            min-width: 135px;
+            height: 375px;
           }
 
-          .left-badge {
-            position: absolute;
-            top: 0px;
-            left: 0px;
-
-            img {
-              max-width: 80px;
+          .item {
+            h3.item-title {
+              @media screen and (max-width: 425px) {
+                font-size: 1rem;
+                text-align: center;
+                min-height: 65px;
+                margin-bottom: 15px;
+              }
             }
 
-            .free-ship {
-              padding: 5px 10px;
-              background-color: #0dc70e;
-              border-radius: 15px;
-              color: white;
-              text-transform: uppercase;
-              font-size: 0.75rem;
-              font-weight: 600;
-              user-select: none;
+            .item-image {
+              .left-badge {
+                img {
+                  max-width: 60px;
+                }
+    
+                .free-ship {
+                  font-size: 0.625rem;
+                }
+              }
+    
+              .right-badge {
+                .discount {
+                  font-size: 0.625rem;
+                }
+              }
             }
-          }
 
-          .right-badge {
-            position: absolute;
-            top: 0px;
-            right: 0;
-
-            .discount {
-              padding: 5px 10px;
-              background-color: #f9221f;
-              border-radius: 15px;
-              color: white;
-              text-transform: uppercase;
-              font-size: 0.75rem;
-              font-weight: 600;
-              user-select: none;
+            .price-container {    
+              p.original-price {
+                font-size: 0.625rem;
+              }
+    
+              p.discount-price {
+                font-size: 1rem;
+              }
+    
+              p.installment-price {
+                font-size: 0.750rem;
+              }
             }
-          }
-        }
-
-        .price-container {
-          width: 100%;
-
-          * {
-            letter-spacing: -0.01em;
-            text-align: center;
-          }
-
-          .big {
-            font-size: 1.25em;
-            font-weight: 600;
-          }
-
-          .accent-color {
-            color: $accent-color;
-          }
-
-          p.original-price {
-            font-size: 0.75rem;
-            margin-bottom: 5px;
-            color: rgb(168, 168, 168);
-
-            .striked {
-              text-decoration: line-through;
-            }
-          }
-
-          p.discount-price {
-            font-size: 1.125rem;
-            margin-bottom: 5px;
-            color: #222;
-          }
-
-          p.installment-price {
-            font-size: 0.875rem;
-            color: #545454;
           }
         }
       }
