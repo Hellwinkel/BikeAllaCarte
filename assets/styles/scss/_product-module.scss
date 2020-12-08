@@ -269,10 +269,10 @@
       outline: none;
 
       @media screen and (max-width: 425px) {
-        width: 30px;
-        height: 45px;
+        width: 35px !important;
+        height: 35px !important;
         box-shadow: none !important;
-        background-size: 50%;
+        background-size: 40%;
         opacity: 0.6;
 
         &:hover,

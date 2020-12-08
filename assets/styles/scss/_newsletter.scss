@@ -9,26 +9,36 @@
   align-items: center;
   justify-content: center;
 
+  @media screen and (max-width: 639px) {
+    height: 180px;
+  }
+
   .newsletter-container {
     width: 75%;
-    max-width: 1000px;
+    max-width: 900px;
     display: flex;
     flex-flow: row;
     align-items: center;
     justify-content: space-between;
 
+    @media screen and (max-width: 639px) {
+      width: 100%;
+      padding: 7%;
+      font-size: 1rem;
+    }
+
     p {
       font-size: 1.75rem;
       color: white;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1.25;
       display: block;
       max-width: 400px;
+      letter-spacing: -0.02em;
       text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
 
       @media screen and (max-width: 1023px) {
         font-size: 1.5rem;
-
       }
 
       @media screen and (max-width: 639px) {
@@ -49,14 +59,19 @@
       position: relative;
       width: 50%;
       max-width: 400px;
-      min-width: 260px;
+      min-width: 280px;
       display: flex;
       align-items: center;
       justify-content: center;
 
+      @media screen and (max-width: 639px) {
+        width: 100%;
+      }
+
       input[type=email] {
         position: relative;
         min-width: 100%;
+        width: 100%;
         border: none;
         border-radius: 25px;
         padding: 12px 20px;
@@ -66,10 +81,15 @@
         font-style: italic;
         box-shadow: none;
         transition: 200ms;
-        font-weight: 100 !important;
+        font-weight: 400 !important;
         
         &:focus {
           box-shadow: 0px 0px 15px white;
+        }
+
+        @media screen and (max-width: 639px) {
+          padding: 10px 15px;
+          font-size: 1rem;
         }
       }
 
@@ -77,11 +97,24 @@
         position: absolute;
         right: 0px;
         height: 100%;
-        width: 75px;
+        width: 100px;
+        padding: 7px 17px;
         border-radius: 0px 28px 28px 0px;
         border: none;
-        background-color: #f4f4f4;
+        background-color: white;
         cursor: pointer;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        color: $accent-color;
+        font-weight: 500;
+        text-transform: lowercase;
+
+        img {
+          width: 20px;
+          filter: $png-color;
+        }
       }
     }
 
