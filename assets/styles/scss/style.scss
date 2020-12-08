@@ -5,6 +5,8 @@ $primary-color: #0dc70e;
 $secondary-color: #222222;
 $third-color: #222222;
 $accent-color: #0dc70e;
+$footer-text: #f7f7f7;
+$footer-link: #f7f7f7;
 $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(115%) contrast(90%);
 
 // BSB
@@ -12,15 +14,18 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
 // $secondary-color: #f7f7f7;
 // $third-color: #222222;
 // $accent-color: #fa2626;
+// $footer-text: #222222;
+// $footer-link: #fa2626;
 // $png-color: invert(18%) sepia(68%) saturate(4223%) hue-rotate(350deg) brightness(123%) contrast(96%);
 
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: darken($accent-color, 20%);
+  // background: darken($accent-color, 20%);
+  background: $secondary-color;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -75,15 +80,6 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
     min-height: 200px;
   }
 
-  .footer {
-    width: 100%;
-    height: 580px;
-    background-color: $secondary-color;
-    box-shadow: 0px -3px 10px rgba(0, 0, 0, 0.15);
-    position: relative;
-    z-index: 10;
-  }
-
   // ------------------
 
   * {
@@ -116,4 +112,5 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
     @import 'product-module';
   }
   @import 'newsletter';
+  @import 'footer';
 }
