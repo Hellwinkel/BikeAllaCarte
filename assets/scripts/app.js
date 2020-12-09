@@ -14,6 +14,31 @@ $(document).ready(function() {
   // -------------- 
 })
 
+{
+  let brand = new Swiper('.brand-container', {
+    enteredSlides: true,
+    loop: true,
+    slidesPerGroup: 1,
+    slidesPerView: 2,
+    spaceBetween: 25,
+    simulateTouch: true,
+    speed: 600,
+    autoplay: {
+      delay: 1800
+    },
+    grabCursor: true,
+    breakpoints: {
+      750: {slidesPerView: 3},
+      1045: {slidesPerView: 4},
+      1335: {slidesPerView: 5},
+      1625: {slidesPerView: 6},
+      1915: {slidesPerView: 7},
+      2205: {slidesPerView: 8},
+      2495: {slidesPerView: 9}
+    }
+  })
+}
+
 
 // Create swiper instance
 {

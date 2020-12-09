@@ -90,6 +90,8 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
     font-family: 'IBM Plex Sans', sans-serif;
   }
 
+  @import 'brand-slider';
+
   .main-content {
     width: 100%;
     display: flex;
