@@ -19,15 +19,18 @@ $(document).ready(function() {
     enteredSlides: true,
     loop: true,
     slidesPerGroup: 1,
-    slidesPerView: 2,
+    slidesPerView: 1,
     spaceBetween: 25,
     simulateTouch: true,
     speed: 600,
+    followFinger: true,
     autoplay: {
+      disableOnInteraction: false,
       delay: 1800
     },
     grabCursor: true,
     breakpoints: {
+      400: {slidesPerView: 2},
       750: {slidesPerView: 3},
       1045: {slidesPerView: 4},
       1335: {slidesPerView: 5},
@@ -54,6 +57,7 @@ $(document).ready(function() {
         slidesPerView: 1,
         spaceBetween: 25,
         simulateTouch: false,
+        followFinger: true,
         navigation: {
           nextEl: `#${id}-swiper-next`,
           prevEl: `#${id}-swiper-prev`
@@ -76,6 +80,7 @@ $(document).ready(function() {
         slidesPerView: 1,
         spaceBetween: 25,
         simulateTouch: false,
+        followFinger: true,
         navigation: {
           nextEl: `#${id}-swiper-next`,
           prevEl: `#${id}-swiper-prev`
