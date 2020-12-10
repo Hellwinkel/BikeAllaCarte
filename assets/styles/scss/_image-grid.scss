@@ -4,6 +4,13 @@
   padding-top: 32.5%;
   margin-bottom: 60px;
   position: relative;
+
+  @media screen and (max-width: 639px) {
+    height: auto;
+    padding-top: 0;
+    width: calc(100% - 20px);
+    margin-bottom: 0px;
+  }
 }
 
 .image-grid {
@@ -42,6 +49,11 @@
 
     &.image-3 {
       grid-area: image3;
+
+      img {
+        width: auto;
+        height: 100%;
+      }
     }
 
     &.image-4 {
@@ -50,6 +62,24 @@
 
     &.image-5 {
       grid-area: image5;
+    }
+  }
+
+  @media screen and (max-width: 639px) {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+
+    .image-container {
+      overflow: initial;
+
+      img {
+        width: 100% !important;
+        height: auto !important;
+      }
     }
   }
 }
