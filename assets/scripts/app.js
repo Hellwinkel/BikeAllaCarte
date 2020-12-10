@@ -30,7 +30,7 @@ $(document).ready(function() {
     },
     grabCursor: true,
     breakpoints: {
-      400: {slidesPerView: 2},
+      350: {slidesPerView: 2},
       750: {slidesPerView: 3},
       1045: {slidesPerView: 4},
       1335: {slidesPerView: 5},
