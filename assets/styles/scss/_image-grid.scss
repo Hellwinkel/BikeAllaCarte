@@ -1,0 +1,55 @@
+.image-wrapper {
+  width: 95%;
+  height: 0;
+  padding-top: 32.5%;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.image-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 60px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "image1 image3 image4"
+    "image2 image3 image5";
+
+  .image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &.image-1 {
+      grid-area: image1;
+    }
+
+    &.image-2 {
+      grid-area: image2;
+    }
+
+    &.image-3 {
+      grid-area: image3;
+    }
+
+    &.image-4 {
+      grid-area: image4;
+    }
+
+    &.image-5 {
+      grid-area: image5;
+    }
+  }
+}
