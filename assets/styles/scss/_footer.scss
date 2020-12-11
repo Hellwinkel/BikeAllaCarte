@@ -9,6 +9,10 @@
   align-items: center;
   justify-content: center;
 
+  a {
+    text-decoration: none !important;
+  }
+
   .footer-container {
     width: 100%;
     max-width: 1250px;
