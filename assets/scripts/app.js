@@ -15,8 +15,23 @@ $(document).ready(function() {
 })
 
 {
+  let mainSlider = new Swiper('.swiper-container#main-slider', {
+    loop: true,
+    slidesPerGroup: 1,
+    slidesPerView: 1,
+    speed: 500,
+    cssMode: true,
+    autoplay: {
+      disableOnInteraction: false,
+      delay: 3600
+    }
+  })
+}
+
+// Brand swiper
+{
   let brand = new Swiper('.brand-container', {
-    enteredSlides: true,
+    centeredSlides: true,
     loop: true,
     slidesPerGroup: 1,
     slidesPerView: 1,

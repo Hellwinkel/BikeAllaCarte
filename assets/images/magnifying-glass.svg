@@ -1,0 +1,8 @@
+<svg id="magnifying-glass" xmlns="http://www.w3.org/2000/svg" width="21.911" height="23.911" viewBox="0 0 21.911 23.911">
+  <g id="Elipse_2" data-name="Elipse 2" fill="rgba(255,255,255,0)" stroke="#707070" stroke-width="2">
+    <circle cx="8.5" cy="8.5" r="8.5" stroke="none"/>
+    <circle cx="8.5" cy="8.5" r="7.5" fill="none"/>
+  </g>
+  <line id="Linha_1" data-name="Linha 1" x2="7" y2="8" transform="translate(13.5 14.5)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="2"/>
+  <path id="Caminho_8" data-name="Caminho 8" d="M870.167,284.667a8.47,8.47,0,0,1-.5,3.667,6.942,6.942,0,0,1-2.542,2.729" transform="translate(-857 -278)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" opacity="0.17"/>
+</svg>

@@ -1,0 +1,253 @@
+.navbar-custom {
+  width: 100%;
+  background-color: $secondary-color;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+
+  .navbar-elements {
+    width: calc(100% - 90px);
+    max-height: 100px;
+    max-width: 1600px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+
+    a.brand {
+      img {
+        height: 100%;
+        max-height: 100px;
+      }
+    }
+
+    a:focus {
+      outline: 1px solid transparentize($accent-color, 0.8);
+    }
+
+    form.form-inline {
+      width: 50%;
+      position: relative;
+      display: flex;
+      flex-flow: row;
+      align-items: center;
+      justify-content: flex-end;
+
+      input[type="search"].form-control {
+        width: 100%;
+        position: relative;
+        padding: 7px 20px;
+        border-radius: 22px;
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: 400;
+        color: #858585;
+        letter-spacing: -0.01em;
+        height: auto;
+        border: none;
+        transition: 150ms;
+
+        &:focus {
+          box-shadow: 0px 0px 0px 2px
+            transparentize(lighten($accent-color, 25%), 0.4);
+        }
+      }
+
+      button.search-button {
+        position: absolute;
+        right: 1px;
+        height: calc(100% - 2px);
+        border-radius: 0px 21px 21px 0px;
+        border: none;
+        background-color: white;
+        padding: 0px 15px;
+        outline: none;
+
+        img {
+          transition: 150ms;
+        }
+
+        &:hover,
+        &:focus {
+          img {
+            filter: $png-color;
+          }
+        }
+      }
+    }
+
+    .icon-container {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+
+      > * {
+        margin-right: 40px;
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+
+      .account {
+        display: flex;
+        flex-flow: row;
+        align-items: center;
+        justify-content: space-between;
+
+        .icon {
+          margin-right: 10px;
+        }
+
+        .text {
+          display: flex;
+          flex-flow: column;
+          align-items: flex-start;
+          justify-content: center;
+
+          p.account-text {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: lighten($accent-color, 5%);
+            letter-spacing: -0.02em;
+            font-weight: 500;
+          }
+
+          .account-link {
+            height: 1rem;
+            display: flex;
+            flex-flow: row;
+            align-items: center;
+
+            a,
+            span {
+              color: $main-text;
+              font-size: 0.75rem;
+              text-decoration: none;
+              transition: 150ms;
+            }
+
+            span {
+              margin: 0px 0.5ch;
+            }
+
+            a:hover,
+            a:focus {
+              color: lighten($accent-color, 7%);
+            }
+          }
+        }
+      }
+
+      .cart {
+        position: relative;
+        padding-right: 9px;
+
+        .badge {
+          position: absolute;
+          top: -2px;
+          right: 0px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          background: linear-gradient(
+            to bottom,
+            lighten($badge-color, 5%),
+            $badge-color
+          );
+          box-shadow: 0px 1px 6px 1px $badge-color;
+          font-size: 0.875rem;
+          color: white;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .menu-options {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      to bottom right,
+      lighten($primary-color, 5%),
+      $primary-color
+    );
+
+    .navbar-collapse {
+      width: 100%;
+      max-width: 1600px;
+      height: 100%;
+      
+      .navbar-nav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        
+        .left-links, .right-links {
+          display: flex;
+          flex-flow: row nowrap;
+          align-items: center;
+          justify-content: flex-start;
+          height: 100%;
+          
+          li {
+            height: 100%;
+            
+            a {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              background-color: red;
+              color: white;
+              font-size: 1rem;
+              text-transform: uppercase;
+              font-weight: 500;
+              letter-spacing: -0.01em;
+              text-decoration: none;
+              text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+              padding: 0px 15px;
+              height: 100%;
+              background: transparentize(white, 1);
+              transition: 200ms;
+              
+              &:hover, &:focus {
+                background-color: transparentize(white, 0.7);
+              }
+              
+              &.highlight {
+                background-color: transparentize(white, 0.7);
+                
+                &:hover, &:focus {
+                  background-color: transparentize(white, 0.5);
+                }
+              }
+
+              &:after {
+                display: none;
+              }
+            }
+  
+            &.right-link {
+              justify-self: flex-end;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -252,68 +252,6 @@
     justify-content: space-between;
     position: relative;
 
-    .swiper-arrow {
-      width: 0px;
-      height: 0px;
-      position: absolute;
-      z-index: 25;
-      box-shadow: 0px 0px 0px 2px rgba(101, 101, 101, 0.65) inset;
-      border-radius: 50%;
-      background-image: url("../images/slider-arrow.svg");
-      background-position-y: center;
-      background-position-x: calc(50% + 2px);
-      background-size: 30%;
-      background-repeat: no-repeat;
-      cursor: pointer;
-      opacity: 0;
-      outline: none;
-
-      @media screen and (max-width: 425px) {
-        width: 35px !important;
-        height: 35px !important;
-        box-shadow: none !important;
-        background-size: 40%;
-        opacity: 0.6;
-
-        &:hover,
-        &:focus {
-          box-shadow: none;
-        }
-      }
-    }
-
-    .swiper-custom-button-prev {
-      left: 0;
-      transform: rotate(180deg);
-    }
-
-    .swiper-custom-button-next {
-      right: 0;
-    }
-
-    .swiper-arrow[tabindex="-1"] {
-      cursor: initial;
-      width: 0px;
-      height: 0px;
-      opacity: 0;
-      transition: 150ms ease-out;
-    }
-
-    .swiper-arrow[tabindex="0"] {
-      cursor: initial;
-      width: 40px;
-      height: 40px;
-      opacity: 0.35;
-      cursor: pointer;
-      transition: 150ms ease-out;
-
-      &:hover,
-      &:focus {
-        box-shadow: 0px 0px 0px 3px rgba(101, 101, 101, 1) inset;
-        opacity: 0.6;
-      }
-    }
-
     .swiper-container {
       margin: 0px 40px;
       padding: 20px;

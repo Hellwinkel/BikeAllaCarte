@@ -5,8 +5,9 @@ $primary-color: #0dc70e;
 $secondary-color: #222222;
 $third-color: #222222;
 $accent-color: #0dc70e;
-$footer-text: #f7f7f7;
-$footer-link: #f7f7f7;
+$main-text: #f7f7f7;
+$main-link: #f7f7f7;
+$badge-color: #FF1D1D;
 $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(115%) contrast(90%);
 
 // BSB
@@ -14,8 +15,9 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
 // $secondary-color: #f7f7f7;
 // $third-color: #222222;
 // $accent-color: #fa2626;
-// $footer-text: #222222;
-// $footer-link: #fa2626;
+// $main-text: #222222;
+// $main-link: #fa2626;
+// $badge-color: #222222;
 // $png-color: invert(18%) sepia(68%) saturate(4223%) hue-rotate(350deg) brightness(123%) contrast(96%);
 
 
@@ -76,14 +78,7 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
     }
   }
 
-  .main-slider {
-    width: 100%;
-    height: 0px;
-    padding-top: 14.64129%;
-    background-color: #E1E1E1;
-    margin-bottom: 45px;
-    min-height: 200px;
-  }
+  
 
   // ------------------
 
@@ -95,6 +90,71 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
     font-family: 'IBM Plex Sans', sans-serif;
   }
 
+  // Slider arrow
+  .swiper-arrow {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    z-index: 25;
+    box-shadow: 0px 0px 0px 2px rgba(101, 101, 101, 0.65) inset;
+    border-radius: 50%;
+    background-image: url("../images/slider-arrow.svg");
+    background-position-y: center;
+    background-position-x: calc(50% + 2px);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0;
+    outline: none;
+
+    @media screen and (max-width: 425px) {
+      width: 35px !important;
+      height: 35px !important;
+      box-shadow: none !important;
+      background-size: 40%;
+      opacity: 0.6;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .swiper-custom-button-prev {
+    left: 0;
+    transform: rotate(180deg);
+  }
+
+  .swiper-custom-button-next {
+    right: 0;
+  }
+
+  .swiper-arrow[tabindex="-1"] {
+    cursor: initial;
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+    transition: 150ms ease-out;
+  }
+
+  .swiper-arrow[tabindex="0"] {
+    cursor: initial;
+    width: 40px;
+    height: 40px;
+    opacity: 0.35;
+    cursor: pointer;
+    transition: 150ms ease-out;
+
+    &:hover,
+    &:focus {
+      box-shadow: 0px 0px 0px 3px rgba(101, 101, 101, 1) inset;
+      opacity: 0.6;
+    }
+  }
+
+  @import 'navbar';
+  @import 'main-slider';
   @import 'brand-slider';
 
   .main-content {
