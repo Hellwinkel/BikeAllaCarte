@@ -336,12 +336,10 @@
               max-height: 300px;
               user-select: none;
             }
-  
-            .left-badge {
+            
+            .top-left-badge, .top-right-badge, .bottom-right-badge, .bottom-left-badge {
               position: absolute;
-              top: 0px;
-              left: 0px;
-  
+
               img {
                 max-width: 80px;
               }
@@ -355,14 +353,8 @@
                 font-size: 0.75rem;
                 font-weight: 600;
                 user-select: none;
-              }
-            }
-  
-            .right-badge {
-              position: absolute;
-              top: 0px;
-              right: 0;
-  
+              }  
+
               .discount {
                 padding: 5px 10px;
                 background-color: #f9221f;
@@ -373,6 +365,26 @@
                 font-weight: 600;
                 user-select: none;
               }
+            }
+
+            .top-left-badge {
+              top: 0px;
+              left: 0px;
+            }
+  
+            .top-right-badge {
+              top: 0px;
+              right: 0;
+            }
+
+            .bottom-right-badge {
+              bottom: 0px;
+              right: 0;
+            }
+            
+            .bottom-left-badge {
+              bottom: 0px;
+              left: 0;
             }
           }
   
