@@ -161,3 +161,31 @@ $(document).ready(function() {
     $(this).removeClass('hover')
   })
 }
+
+
+// Activate menu filter
+function toggleFilter(status = null) {
+  const filter = $('.filter')
+
+  if(status === null) {
+    console.error('toggleFilter must receive true or false')
+    return
+  }
+
+  if(status === true) {
+    filter.addClass('show')
+  } else {
+    filter.removeClass('show')
+  }
+}
+
+$('.navbar-nav .dropdown').on('show.bs.dropdown', function() {
+  $(this).find('.dropdown-menu a').attr('tabindex', 0)
+  toggleFilter(true)
+})
+
+$('.navbar-nav .dropdown').on('hidden.bs.dropdown', function() {  
+  $(this).find('.dropdown-menu a').attr('tabindex', -1)
+  toggleFilter(false)
+})
+

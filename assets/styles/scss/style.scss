@@ -154,15 +154,15 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
   }
 
   @import 'navbar';
-  @import 'main-slider';
-  @import 'brand-slider';
 
-  .main-content {
+  .main-container {
+    max-width: 100%;
     width: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
 
     @media screen and (max-width: 1023px) {
       .responsive-hidden-xl {
@@ -176,10 +176,31 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
       }
     }
 
+    .filter {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0%;
+      opacity: 0;
+      background-color: rgba(0, 0, 0, 0);
+      z-index: 500;
+      transition: opacity 100ms;
+      
+      &.show {
+        opacity: 1;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+      }
+    }
+
+    @import 'brand-slider';
+    @import 'main-slider';
     @import 'product-module';
     @import 'parallax';
+    @import 'image-grid';
+    @import 'newsletter';
+    @import 'footer';
   }
-  @import 'image-grid';
-  @import 'newsletter';
-  @import 'footer';
 }

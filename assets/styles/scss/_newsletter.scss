@@ -97,7 +97,7 @@
         right: 0px;
         height: 100%;
         width: 100px;
-        padding: 7px 17px;
+        padding: 7px 14px;
         border-radius: 0px 28px 28px 0px;
         border: none;
         background-color: white;
@@ -109,9 +109,18 @@
         color: $accent-color;
         font-weight: 500;
 
+        &:hover, &:focus {
+          outline: none;
+          box-shadow: 0px 0px 5px #ccc inset;
+        }
+
         img {
           width: 20px;
           filter: $png-color;
+        }
+
+        span {
+          margin-bottom: 2px;
         }
       }
     }
