@@ -23,19 +23,28 @@
 </head>
 
 <body class="new-ui">
-  <nav class="navbar navbar-expand-lg navbar-custom">
+  <nav class="navbar navbar-expand-xl navbar-dark navbar-custom">
     <div class="navbar-elements">
+      <div class="button-container">
+        <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarLinks"
+          aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="stick top"></span>
+          <span class="stick mid"></span>
+          <span class="stick bot"></span>
+        </button>
+      </div>
       <a href="#" class="brand">
         <img src="assets/images/BikeAllaCarte-logo.png" alt="">
       </a>
-      <form class="form-inline">
+
+      <form class="form-inline show-for-desktop">
         <input class="form-control" type="search" placeholder="Busque pelo seu produto" aria-label="Search">
         <button class="search-button" type="submit">
           <img src="assets/images/magnifying-glass.svg" alt="" class="magnifying-glass">
         </button>
       </form>
       <div class="icon-container">
-        <div class="account">
+        <div class="account show-for-desktop">
           <img src="assets/images/bac-account-icon.svg" alt="" class="icon">
           <div class="text">
             <p class="account-text">
@@ -48,18 +57,32 @@
             </div>
           </div>
         </div>
+        <button class="mobile-search-button hide-for-desktop">
+          <img src="assets/images/bac-search-icon.svg" alt="">
+        </button>
         <a href="#" class="cart">
           <img src="assets/images/bac-cart-icon.svg" alt="" class="icon">
           <span class="badge show">3</span>
         </a>
-        <a href="" class="help-center">
+        <a href="" class="help-center show-for-desktop">
           <img src="assets/images/bac-help-center-icon.svg" alt="" class="icon">
         </a>
       </div>
     </div>
     <div class="menu-options">
-      <div class="collapse navbar-collapse" id="navbarLinks">
+      <div class="collapse navbar-collapse show" id="navbarLinks">
         <ul class="navbar-nav">
+          <a href="" class="login-mobile hide-for-desktop">
+            <img src="assets/images/white-account-icon.svg" alt="">
+            <div class="text">
+              <p class="main-text">
+                Minha conta
+              </p>
+              <p class="small-text">
+                Entre / Cadastre-se
+              </p>
+            </div>
+          </a>
           <div class="left-links">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -90,32 +113,71 @@
                 <a class="dropdown-item" href="#" tabindex="-1">Another action</a>
               </div>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown show">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                Capacetes
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#" tabindex="-1">Action</a>
-                <a class="dropdown-item" href="#" tabindex="-1">Another action</a>
-              </div>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+                aria-haspopup="true" aria-expanded="true">
                 Feminino
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#" tabindex="-1">Action</a>
-                <a class="dropdown-item" href="#" tabindex="-1">Another action</a>
+              <div class="dropdown-menu show" aria-labelledby="navbarDropdown">
+                <div class="links">
+                  <div class="category-content">
+                    <p class="category-name">
+                      Feminino
+                    </p>
+                    <a href="#" class="category-link">Visualizar categoria completa</a>
+                  </div>
+                  <ul class="subcategories">
+                    <li class="subcategory"><a href="">Abraçadeiras de canote</a></li>
+                    <li class="subcategory"><a href="">Aros</a></li>
+                    <li class="subcategory"><a href="">Cubos e conduites</a></li>
+                    <li class="subcategory"><a href="">Caixa de direção</a></li>
+                    <li class="subcategory"><a href="">Câmbios</a></li>
+                    <li class="subcategory"><a href="">Câmbios dianteiros</a></li>
+                    <li class="subcategory"><a href="">Canotes</a></li>
+                    <li class="subcategory"><a href="">Cassetes</a></li>
+                    <li class="subcategory"><a href="">Coroas</a></li>
+                    <li class="subcategory"><a href="">Correntes</a></li>
+                    <li class="subcategory"><a href="">Eixos</a></li>
+                    <li class="subcategory"><a href="">Freios</a></li>
+                    <li class="subcategory"><a href="">Abraçadeiras de canote</a></li>
+                    <li class="subcategory"><a href="">Aros</a></li>
+                    <li class="subcategory"><a href="">Cubos e conduites</a></li>
+                    <li class="subcategory"><a href="">Caixa de direção</a></li>
+                    <li class="subcategory"><a href="">Câmbios</a></li>
+                    <li class="subcategory"><a href="">Câmbios dianteiros</a></li>
+                    <li class="subcategory"><a href="">Canotes</a></li>
+                    <li class="subcategory"><a href="">Cassetes</a></li>
+                    <li class="subcategory"><a href="">Coroas</a></li>
+                    <li class="subcategory"><a href="">Correntes</a></li>
+                    <li class="subcategory"><a href="">Eixos</a></li>
+                    <li class="subcategory"><a href="">Freios</a></li>
+                    <li class="subcategory"><a href="">Abraçadeiras de canote</a></li>
+                    <li class="subcategory"><a href="">Aros</a></li>
+                    <li class="subcategory"><a href="">Cubos e conduites</a></li>
+                    <li class="subcategory"><a href="">Caixa de direção</a></li>
+                    <li class="subcategory"><a href="">Freios</a></li>
+                    <li class="subcategory"><a href="">Abraçadeiras de canote</a></li>
+                    <li class="subcategory"><a href="">Aros</a></li>
+                    <li class="subcategory"><a href="">Cubos e conduites</a></li>
+                    <li class="subcategory"><a href="">Caixa de direção</a></li>
+                    <li class="subcategory"><a href="">Câmbios</a></li>
+                    <li class="subcategory"><a href="">Cassetes</a></li>
+                    <li class="subcategory"><a href="">Coroas</a></li>
+                    <li class="subcategory"><a href="">Correntes</a></li>
+                    <li class="subcategory"><a href="">Eixos</a></li>
+                    <li class="subcategory"><a href="">Freios</a></li>
+                  </ul>
+                </div>
+                <div class="banner-container">
+                </div>
               </div>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="componentes" role="button" data-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 Componentes
               </a>
-              <div class="dropdown-menu" aria-labelledby="componentes">
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <div class="links">
                   <div class="category-content">
                     <p class="category-name">
