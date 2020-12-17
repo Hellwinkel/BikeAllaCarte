@@ -174,19 +174,13 @@ $(window).scroll(function() {
   });
 }
 
-// Activate menu filter
-function toggleFilter(status = null) {
-  const filter = $(".filter");
-
-  if (status === null) {
-    console.error("toggleFilter must receive true or false");
-    return;
-  }
-
-  if (status === true) {
-    filter.addClass("show");
-  } else {
-    filter.removeClass("show");
+function toggleSearchBox() {
+  $('.form-inline').toggleClass('show')
+  $('.filter').toggleClass('show')
+  $('.mobile-search-button').toggleClass('show')
+  
+  if(!$('.navbar-toggler').hasClass('collapsed')) {
+    $('.navbar-toggler').click()
   }
 }
 
@@ -201,12 +195,12 @@ function toggleFilter(status = null) {
 // });
 
 $(".navbar-nav .dropdown").on("show.bs.dropdown", function () {
-  toggleFilter(true);
+  $(".filter").toggleClass('show')
   $(this).find(".dropdown-menu a").attr("tabindex", 0);
 });
 
 $(".navbar-nav .dropdown").on("hidden.bs.dropdown", function () {
-  toggleFilter(false);
+  $(".filter").toggleClass('show')
   $(this).find(".dropdown-menu a").attr("tabindex", -1);
 });
 
@@ -216,9 +210,17 @@ $(".dropdown-menu").on("click.bs.dropdown", function (e) {
 });
 
 $(".collapse").on('show.bs.collapse', function () {
-  $('.new-ui').addClass('hidden-overflow')
+  $('body').addClass('hidden-overflow')
 })
 
 $(".collapse").on('hidden.bs.collapse', function () {
-  $('.new-ui').removeClass('hidden-overflow')
+  $('body').removeClass('hidden-overflow')
+})
+
+$('.mobile-search-button.show').on('click', toggleSearchBox)
+$('button.close-search').on('click', toggleSearchBox)
+$('.filter').on('click', function() {
+  if(window.matchMedia('screen and (max-width: 1199px)').matches) {
+    toggleSearchBox()
+  }
 })

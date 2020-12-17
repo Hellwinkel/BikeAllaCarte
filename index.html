@@ -26,54 +26,63 @@
   <nav class="navbar navbar-expand-xl navbar-dark navbar-custom">
     <div class="navbar-elements">
       <div class="button-container">
-        <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarLinks"
-          aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse"
+          data-target="#navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
           <span class="stick top"></span>
           <span class="stick mid"></span>
           <span class="stick bot"></span>
         </button>
       </div>
       <a href="#" class="brand">
-        <img src="assets/images/BikeAllaCarte-logo.png" alt="">
+        <img src="assets/img/BikeAllaCarte-logo.png" alt="">
       </a>
 
-      <form class="form-inline show-for-desktop">
+      <form class="form-inline">
+        <div class="mobile-search-header hide-for-desktop">
+          <p class="mobile-search-text">
+            Busca
+          </p>
+          <button type="button" class="close-search">
+            <div class="stick top"></div>
+            <div class="stick bottom"></div>
+          </button>
+        </div>
         <input class="form-control" type="search" placeholder="Busque pelo seu produto" aria-label="Search">
         <button class="search-button" type="submit">
-          <img src="assets/images/magnifying-glass.svg" alt="" class="magnifying-glass">
+          <img src="assets/img/magnifying-glass.svg" alt="" class="magnifying-glass">
         </button>
       </form>
       <div class="icon-container">
-        <div class="account show-for-desktop">
-          <img src="assets/images/bac-account-icon.svg" alt="" class="icon">
+        <a href="#" class="account show-for-desktop">
+          <img src="assets/img/bac-account-icon.svg" alt="" class="icon">
           <div class="text">
             <p class="account-text">
               Minha conta
             </p>
             <div class="account-link">
-              <a href="" class="login">Entre</a>
+              <span class="login">Entre</span>
               <span>/</span>
-              <a href="">Cadastre-se</a>
+              <span>Cadastre-se</span>
             </div>
           </div>
-        </div>
-        <button class="mobile-search-button hide-for-desktop">
-          <img src="assets/images/bac-search-icon.svg" alt="">
+        </a>
+        <button class="mobile-search-button hide-for-desktop show">
+          <img src="assets/img/bac-search-icon.svg" alt="">
         </button>
         <a href="#" class="cart">
-          <img src="assets/images/bac-cart-icon.svg" alt="" class="icon">
+          <img src="assets/img/bac-cart-icon.svg" alt="" class="icon">
           <span class="badge show">3</span>
         </a>
         <a href="" class="help-center show-for-desktop">
-          <img src="assets/images/bac-help-center-icon.svg" alt="" class="icon">
+          <img src="assets/img/bac-help-center-icon.svg" alt="" class="icon">
         </a>
       </div>
     </div>
     <div class="menu-options">
-      <div class="collapse navbar-collapse show" id="navbarLinks">
+      <div class="collapse navbar-collapse" id="navbarLinks">
         <ul class="navbar-nav">
           <a href="" class="login-mobile hide-for-desktop">
-            <img src="assets/images/white-account-icon.svg" alt="">
+            <img src="assets/img/white-account-icon.svg" alt="">
             <div class="text">
               <p class="main-text">
                 Minha conta
@@ -113,12 +122,12 @@
                 <a class="dropdown-item" href="#" tabindex="-1">Another action</a>
               </div>
             </li>
-            <li class="nav-item dropdown show">
+            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="true">
+                aria-haspopup="true" aria-expanded="false">
                 Feminino
               </a>
-              <div class="dropdown-menu show" aria-labelledby="navbarDropdown">
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <div class="links">
                   <div class="category-content">
                     <p class="category-name">
@@ -228,7 +237,7 @@
                   </div>
                 </div>
                 <div class="banner-container">
-                  <img src="assets/images/menu-banner.png" alt="">
+                  <img src="assets/img/menu-banner.png" alt="">
                 </div>
               </div>
             </li>
@@ -254,15 +263,10 @@
             </li>
           </div>
           <div class="right-links">
-            <li class="nav-item dropdown right-link">
-              <a class="nav-link dropdown-toggle highlight" href="#" id="navbarDropdown" role="button"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li class="nav-item right-link">
+              <a class="nav-link highlight" href="#">
                 Outlet
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#" tabindex="-1">Action</a>
-                <a class="dropdown-item" href="#" tabindex="-1">Another action</a>
-              </div>
             </li>
           </div>
         </ul>
@@ -271,27 +275,28 @@
   </nav>
 
   <div class="main-container">
+    <div class="mobile-padding"></div>
     <div class="filter"></div>
 
     <div class="swiper-container brand-container">
       <div class="swiper-wrapper brand-slider">
         <a href="#" class="swiper-slide brand">
-          <img src="assets/images/cannondale-logo.png" alt="">
+          <img src="assets/img/cannondale-logo.png" alt="">
         </a>
         <a href="#" class="swiper-slide brand">
-          <img src="assets/images/gt-logo.png" alt="">
+          <img src="assets/img/gt-logo.png" alt="">
         </a>
         <a href="#" class="swiper-slide brand">
-          <img src="assets/images/logo-caloi.png" alt="">
+          <img src="assets/img/logo-caloi.png" alt="">
         </a>
         <a href="#" class="swiper-slide brand">
-          <img src="assets/images/shimano-logo.png" alt="">
+          <img src="assets/img/shimano-logo.png" alt="">
         </a>
         <a href="#" class="swiper-slide brand">
-          <img src="assets/images/sram-logo.png" alt="">
+          <img src="assets/img/sram-logo.png" alt="">
         </a>
         <a href="#" class="swiper-slide brand">
-          <img src="assets/images/thule-logo.png" alt="">
+          <img src="assets/img/thule-logo.png" alt="">
         </a>
       </div>
     </div>
@@ -301,20 +306,20 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <picture>
-              <source media="(min-width:501px" srcset="assets/images/banner-desktop.png">
-              <img src="assets/images/banner-mobile.png" alt="">
+              <source media="(min-width:501px" srcset="assets/img/banner-desktop.png">
+              <img src="assets/img/banner-mobile.png" alt="">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source media="(min-width:501px" srcset="assets/images/banner-desktop.png">
-              <img src="assets/images/banner-mobile.png" alt="">
+              <source media="(min-width:501px" srcset="assets/img/banner-desktop.png">
+              <img src="assets/img/banner-mobile.png" alt="">
             </picture>
           </div>
           <div class="swiper-slide">
             <picture>
-              <source media="(min-width:501px" srcset="assets/images/banner-desktop.png">
-              <img src="assets/images/banner-mobile.png" alt="">
+              <source media="(min-width:501px" srcset="assets/img/banner-desktop.png">
+              <img src="assets/img/banner-mobile.png" alt="">
             </picture>
           </div>
         </div>
@@ -327,7 +332,7 @@
           <h2>
             Bikes Cannondale
           </h2>
-          <img src="assets/images/sale.svg" alt="" class="responsive-hidden">
+          <img src="assets/img/sale.svg" alt="" class="responsive-hidden">
         </div>
         <a href="#" class="module-link">
           <span class="responsive-hidden-xl">Ver todos</span>
@@ -342,7 +347,7 @@
                   Bicicleta Cannondale F-Si Carbon 2 2021
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/cannondale1.jpg" alt="Bicicleta Cannondale F-Si Carbon 2 2021">
+                  <img src="assets/img/cannondale1.jpg" alt="Bicicleta Cannondale F-Si Carbon 2 2021">
                   <div class="top-left-badge">
                     <span class="free-ship">Frete grátis</span>
                   </div>
@@ -364,9 +369,9 @@
                   Bicicleta Cannondale Topstone Carbon Lefty 3 2021
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/cannondale2.jpg" alt="Bicicleta Cannondale Topstone Carbon Lefty 3 2021">
+                  <img src="assets/img/cannondale2.jpg" alt="Bicicleta Cannondale Topstone Carbon Lefty 3 2021">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">12% off</span>
@@ -386,9 +391,9 @@
                   Bicicleta Cannondale SystemSix Carbon Ultegra 2021
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/cannondale3.jpg" alt="Bicicleta Cannondale SystemSix Carbon Ultegra 2021">
+                  <img src="assets/img/cannondale3.jpg" alt="Bicicleta Cannondale SystemSix Carbon Ultegra 2021">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">12% off</span>
@@ -408,9 +413,9 @@
                   Bicicleta Cannondale Supersix Evo Carbon Disc 105 2021
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/cannondale4.jpg" alt="Bicicleta Cannondale Supersix Evo Carbon Disc 105 2021">
+                  <img src="assets/img/cannondale4.jpg" alt="Bicicleta Cannondale Supersix Evo Carbon Disc 105 2021">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">5% off</span>
@@ -430,9 +435,9 @@
                   Bicicleta Cannondale Caad13 Disc 105 2021
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/cannondale5.jpg" alt="Bicicleta Cannondale Caad13 Disc 105 2021">
+                  <img src="assets/img/cannondale5.jpg" alt="Bicicleta Cannondale Caad13 Disc 105 2021">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">10% off</span>
@@ -452,7 +457,7 @@
                   Bicicleta Cannondale Scalpel Carbon SE 1 2021
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/cannondale6.jpg" alt="Bicicleta Cannondale Scalpel Carbon SE 1 2021">
+                  <img src="assets/img/cannondale6.jpg" alt="Bicicleta Cannondale Scalpel Carbon SE 1 2021">
                   <div class="top-left-badge">
                     <span class="free-ship">Frete grátis</span>
                   </div>
@@ -474,9 +479,9 @@
                   Bicicleta Cannondale Scalpel Carbon 4 2021
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/cannondale7.jpg" alt="Bicicleta Cannondale Scalpel Carbon 4 2021">
+                  <img src="assets/img/cannondale7.jpg" alt="Bicicleta Cannondale Scalpel Carbon 4 2021">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">10% off</span>
@@ -496,9 +501,9 @@
                   Bicicleta Cannondale F-Si Carbon 4 2021
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/cannondale8.jpg" alt="Bicicleta Cannondale F-Si Carbon 4 2021">
+                  <img src="assets/img/cannondale8.jpg" alt="Bicicleta Cannondale F-Si Carbon 4 2021">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">15% off</span>
@@ -520,7 +525,7 @@
     </div>
 
     <div class="parallax-window" data-parallax="scroll" data-speed="0.3"
-      data-image-src="assets/images/cannondale-parallax.jpg">
+      data-image-src="assets/img/cannondale-parallax.jpg">
       <p class="parallax-title">
         Cannondale
       </p>
@@ -552,9 +557,9 @@
                   Bicicleta Cannondale E-Bike Synapse Neo 1 2020
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/item2.jpg" alt="Bicicleta Cannondale E-Bike Synapse Neo 1 2020">
+                  <img src="assets/img/item2.jpg" alt="Bicicleta Cannondale E-Bike Synapse Neo 1 2020">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">38% off</span>
@@ -574,9 +579,9 @@
                   Bicicleta Cannondale Supersix Evo Carbon Ultegra 2020
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/item3.png" alt="Bicicleta Cannondale Supersix Evo Carbon Ultegra 2020">
+                  <img src="assets/img/item3.png" alt="Bicicleta Cannondale Supersix Evo Carbon Ultegra 2020">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">25% off</span>
@@ -596,9 +601,9 @@
                   Bicicleta Cannondale Supersix Evo Carbon 105 2020
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/item4.jpg" alt="Bicicleta Cannondale Supersix Evo Carbon 105 2020">
+                  <img src="assets/img/item4.jpg" alt="Bicicleta Cannondale Supersix Evo Carbon 105 2020">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">38% off</span>
@@ -618,9 +623,9 @@
                   Bicicleta Cannondale Scalpel Carbon 4 2021
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/item5.jpg" alt="Bicicleta Cannondale Scalpel Carbon 4 2021">
+                  <img src="assets/img/item5.jpg" alt="Bicicleta Cannondale Scalpel Carbon 4 2021">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">38% off</span>
@@ -640,7 +645,7 @@
                   Bicicleta Cannondale SuperSix EVO Carbon Disc 105
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/item6.jpg" alt="Bicicleta Cannondale SuperSix EVO Carbon Disc 105">
+                  <img src="assets/img/item6.jpg" alt="Bicicleta Cannondale SuperSix EVO Carbon Disc 105">
                   <div class="top-left-badge">
                     <span class="free-ship">Frete grátis</span>
                   </div>
@@ -662,9 +667,9 @@
                   Bicicleta Cannondale E-Bike Synapse Neo 1 2020
                 </h3>
                 <div class="item-image">
-                  <img src="assets/images/item7.jpg" alt="Bicicleta Cannondale E-Bike Synapse Neo 1 2020">
+                  <img src="assets/img/item7.jpg" alt="Bicicleta Cannondale E-Bike Synapse Neo 1 2020">
                   <div class="top-left-badge">
-                    <img src="assets/images/badge.png" alt="">
+                    <img src="assets/img/bac-super-desconto.png" alt="">
                   </div>
                   <span class="top-right-badge">
                     <span class="discount">38% off</span>
@@ -685,23 +690,214 @@
       </div>
     </div>
 
+    <div class="module grid-module small">
+      <div class="module-header">
+        <div class="module-title">
+          <h2>
+            Grid de produtos
+          </h2>
+        </div>
+        <a href="#" class="module-link">
+          <span class="responsive-hidden-xl">Ver todos</span>
+        </a>
+      </div>
+      <div class="module-products">
+        <a href="#" class="item-container">
+          <div class="item">
+            <h3 class="item-title">
+              Bicicleta Cannondale E-Bike Synapse Neo 1 2020
+            </h3>
+            <div class="item-image">
+              <img src="assets/img/item2.jpg" alt="Bicicleta Cannondale E-Bike Synapse Neo 1 2020">
+              <div class="top-left-badge">
+                <img src="assets/img/bac-super-desconto.png" alt="">
+              </div>
+              <span class="top-right-badge">
+                <span class="discount">38% off</span>
+              </span>
+            </div>
+            <div class="price-container">
+              <p class="original-price">de <span class="striked">R$ 36.000,00</span></p>
+              <p class="discount-price">por R$ <span class="big"><span class="accent-color">19.990,00</span></span>
+                no boleto</p>
+              <p class="installment-price">ou R$ 19.990,00 em 12x de R$ 1.665,83</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="item-container">
+          <div class="item">
+            <h3 class="item-title">
+              Bicicleta Cannondale Supersix Evo Carbon Ultegra 2020
+            </h3>
+            <div class="item-image">
+              <img src="assets/img/item3.png" alt="Bicicleta Cannondale Supersix Evo Carbon Ultegra 2020">
+              <div class="top-left-badge">
+                <img src="assets/img/bac-super-desconto.png" alt="">
+              </div>
+              <span class="top-right-badge">
+                <span class="discount">25% off</span>
+              </span>
+            </div>
+            <div class="price-container">
+              <p class="original-price">de <span class="striked">R$ 36.000,00</span></p>
+              <p class="discount-price">por R$ <span class="big"><span class="accent-color">19.990,00</span></span>
+                no boleto</p>
+              <p class="installment-price">ou R$ 19.990,00 em 12x de R$ 1.665,83</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="item-container">
+          <div class="item">
+            <h3 class="item-title">
+              Bicicleta Cannondale Supersix Evo Carbon 105 2020
+            </h3>
+            <div class="item-image">
+              <img src="assets/img/item4.jpg" alt="Bicicleta Cannondale Supersix Evo Carbon 105 2020">
+              <div class="top-left-badge">
+                <img src="assets/img/bac-super-desconto.png" alt="">
+              </div>
+              <span class="top-right-badge">
+                <span class="discount">38% off</span>
+              </span>
+            </div>
+            <div class="price-container">
+              <p class="original-price">de <span class="striked">R$ 36.000,00</span></p>
+              <p class="discount-price">por R$ <span class="big"><span class="accent-color">19.990,00</span></span>
+                no boleto</p>
+              <p class="installment-price">ou R$ 19.990,00 em 12x de R$ 1.665,83</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="item-container">
+          <div class="item">
+            <h3 class="item-title">
+              Bicicleta Cannondale Scalpel Carbon 4 2021
+            </h3>
+            <div class="item-image">
+              <img src="assets/img/item5.jpg" alt="Bicicleta Cannondale Scalpel Carbon 4 2021">
+              <div class="top-left-badge">
+                <img src="assets/img/bac-super-desconto.png" alt="">
+              </div>
+              <span class="top-right-badge">
+                <span class="discount">38% off</span>
+              </span>
+            </div>
+            <div class="price-container">
+              <!-- <p class="original-price">de <span class="striked">R$ 36.000,00</span></p> -->
+              <p class="discount-price">R$ <span class="big"><span class="accent-color">19.990,00</span></span> no
+                boleto</p>
+              <p class="installment-price">ou R$ 19.990,00 em 12x de R$ 1.665,83</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="item-container">
+          <div class="item">
+            <h3 class="item-title">
+              Bicicleta Cannondale SuperSix EVO Carbon Disc 105
+            </h3>
+            <div class="item-image">
+              <img src="assets/img/item6.jpg" alt="Bicicleta Cannondale SuperSix EVO Carbon Disc 105">
+              <div class="top-left-badge">
+                <span class="free-ship">Frete grátis</span>
+              </div>
+              <span class="top-right-badge">
+                <span class="discount">38% off</span>
+              </span>
+            </div>
+            <div class="price-container">
+              <!-- <p class="original-price">de <span class="striked">R$ 36.000,00</span></p> -->
+              <p class="discount-price">R$ <span class="big"><span class="accent-color">19.990,00</span></span> no
+                boleto</p>
+              <p class="installment-price">ou R$ 19.990,00 em 12x de R$ 1.665,83</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="item-container">
+          <div class="item">
+            <h3 class="item-title">
+              Bicicleta Cannondale E-Bike Synapse Neo 1 2020
+            </h3>
+            <div class="item-image">
+              <img src="assets/img/item7.jpg" alt="Bicicleta Cannondale E-Bike Synapse Neo 1 2020">
+              <div class="top-left-badge">
+                <img src="assets/img/bac-super-desconto.png" alt="">
+              </div>
+              <span class="top-right-badge">
+                <span class="discount">38% off</span>
+              </span>
+            </div>
+            <div class="price-container">
+              <p class="original-price">de <span class="striked">R$ 36.000,00</span></p>
+              <p class="discount-price">por R$ <span class="big"><span class="accent-color">19.990,00</span></span>
+                no boleto</p>
+              <p class="installment-price">ou R$ 19.990,00 em 12x de R$ 1.665,83</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="item-container">
+          <div class="item">
+            <h3 class="item-title">
+              Bicicleta Cannondale Supersix Evo Carbon Ultegra 2020
+            </h3>
+            <div class="item-image">
+              <img src="assets/img/item3.png" alt="Bicicleta Cannondale Supersix Evo Carbon Ultegra 2020">
+              <div class="top-left-badge">
+                <img src="assets/img/bac-super-desconto.png" alt="">
+              </div>
+              <span class="top-right-badge">
+                <span class="discount">25% off</span>
+              </span>
+            </div>
+            <div class="price-container">
+              <p class="original-price">de <span class="striked">R$ 36.000,00</span></p>
+              <p class="discount-price">por R$ <span class="big"><span class="accent-color">19.990,00</span></span>
+                no boleto</p>
+              <p class="installment-price">ou R$ 19.990,00 em 12x de R$ 1.665,83</p>
+            </div>
+          </div>
+        </a>
+        <a href="#" class="item-container">
+          <div class="item">
+            <h3 class="item-title">
+              Bicicleta Cannondale Supersix Evo Carbon 105 2020
+            </h3>
+            <div class="item-image">
+              <img src="assets/img/item4.jpg" alt="Bicicleta Cannondale Supersix Evo Carbon 105 2020">
+              <div class="top-left-badge">
+                <img src="assets/img/bac-super-desconto.png" alt="">
+              </div>
+              <span class="top-right-badge">
+                <span class="discount">38% off</span>
+              </span>
+            </div>
+            <div class="price-container">
+              <p class="original-price">de <span class="striked">R$ 36.000,00</span></p>
+              <p class="discount-price">por R$ <span class="big"><span class="accent-color">19.990,00</span></span>
+                no boleto</p>
+              <p class="installment-price">ou R$ 19.990,00 em 12x de R$ 1.665,83</p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+
     <!-- Imagens pequenas: 589x298 / Imagens grandes: 589x622 -->
     <div class="image-wrapper">
       <div class="image-grid">
         <a href="#" class="image-container image-1">
-          <img src="assets/images/grid-image1.png" alt="">
+          <img src="assets/img/grid-image1.png" alt="">
         </a>
         <a href="#" class="image-container image-2">
-          <img src="assets/images/grid-image2.png" alt="">
+          <img src="assets/img/grid-image2.png" alt="">
         </a>
         <a href="#" class="image-container image-3">
-          <img src="assets/images/grid-image3.png" alt="">
+          <img src="assets/img/grid-image3.png" alt="">
         </a>
         <a href="#" class="image-container image-4">
-          <img src="assets/images/grid-image4.png" alt="">
+          <img src="assets/img/grid-image4.png" alt="">
         </a>
         <a href="#" class="image-container image-5">
-          <img src="assets/images/grid-image5.png" alt="">
+          <img src="assets/img/grid-image5.png" alt="">
         </a>
       </div>
     </div>
@@ -714,7 +910,7 @@
         <form action="">
           <input type="email" name="email" id="email" placeholder="seu@email.com">
           <button type="submit">
-            <img src="assets/images/email.svg" alt="">
+            <img src="assets/img/email.svg" alt="">
             <span>Enviar</span>
           </button>
         </form>
@@ -724,7 +920,7 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="logo-container">
-          <img src="assets/images/BikeAllaCarte-logo.png" alt="Bike Alla Carte - Logo" class="logo">
+          <img src="assets/img/BikeAllaCarte-logo.png" alt="Bike Alla Carte - Logo" class="logo">
           <p>
             BikeAllaCarte Comércio de Peças e Acessórios Ltda.<br>
             CNPJ 23.150.883/0001-11<br>
@@ -798,12 +994,12 @@
                 Pague com
               </h2>
               <div class="payment-images">
-                <img src="assets/images/elo-logo-branco.png" alt="">
-                <img src="assets/images/visa-logo-branco.png" alt="" style="height: 90%;">
-                <img src="assets/images/mastercard-logo.png" alt="">
-                <img src="assets/images/amex-logo.png" alt="">
-                <img src="assets/images/hipercard-logo.png" alt="">
-                <img src="assets/images/boleto.png" alt="">
+                <img src="assets/img/elo-logo-branco.png" alt="">
+                <img src="assets/img/visa-logo-branco.png" alt="" style="height: 90%;">
+                <img src="assets/img/mastercard-logo.png" alt="">
+                <img src="assets/img/amex-logo.png" alt="">
+                <img src="assets/img/hipercard-logo.png" alt="">
+                <img src="assets/img/boleto.png" alt="">
               </div>
             </div>
             <div class="social">
@@ -811,9 +1007,9 @@
                 Redes sociais
               </h2>
               <div class="social-images">
-                <a href="#"><img src="assets/images/facebook.svg" alt=""></a>
-                <a href="#"><img src="assets/images/instagram.svg" alt=""></a>
-                <a href="#"><img src="assets/images/youtube.svg" alt=""></a>
+                <a href="#"><img src="assets/img/facebook.svg" alt=""></a>
+                <a href="#"><img src="assets/img/instagram.svg" alt=""></a>
+                <a href="#"><img src="assets/img/youtube.svg" alt=""></a>
               </div>
             </div>
           </div>
