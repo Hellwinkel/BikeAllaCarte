@@ -715,7 +715,7 @@
       .module-products {
         @media screen and (min-width: 471px) and (max-width: 1024px) {
           grid-template-columns: repeat(auto-fill, minmax(213px, 1fr));
-          gap: 60px 30px;
+          gap: 45px 30px;
           padding: 0px 5px;
 
           .item-container {
@@ -766,14 +766,14 @@
 
         @media screen and (max-width: 470px) {
           grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
-          gap: 60px 25px;
+          gap: 45px 25px;
 
           .item-container {
             min-width: 100%;
 
             .item {
               height: 375px;
-              
+
               h3.item-title {
                 font-size: 1rem;
                 text-align: center;
