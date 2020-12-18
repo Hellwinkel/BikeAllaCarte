@@ -56,6 +56,14 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
   align-items: center;
   justify-content: flex-start;
 
+  a {
+    text-decoration: none;
+    
+    &:hover, &:focus {
+      text-decoration: none;
+    }
+  }
+
   @media screen and (max-width: 1199px) {
     &.hidden-overflow {
       overflow: hidden;

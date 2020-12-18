@@ -564,6 +564,136 @@
                       }
                     }
                   }
+
+                  .more-categories {
+                    margin: 0px !important;
+                    padding: 0px;
+                    display: grid;
+                    width: 100%;
+                    grid-template-columns: repeat(
+                      auto-fill,
+                      minmax(250px, 1fr)
+                    );
+                    grid-auto-rows: 1fr;
+                    grid-auto-flow: row;
+                    grid-gap: 0.25rem;
+                    list-style-type: none;
+
+                    .hidden-category {
+                      margin-bottom: 60px;
+
+                      > a:not(.hidden-category-link) {
+                        margin: 0;
+                        font-size: 1.125rem;
+                        color: #545454;
+                        line-height: 1em;
+                        transition: 250ms;
+                        display: inline-block;
+                        max-width: 160px;
+                        font-weight: 600;
+                        padding-bottom: 2px;
+                        position: relative;
+                        text-transform: uppercase;
+
+                        &:hover,
+                        &:focus {
+                          text-decoration: none !important;
+                          color: darken(#545454, 15%);
+                          outline: none;
+                        }
+                      }
+
+                      ul.more-subcategories {
+                        list-style: none;
+                        margin: 0;
+                        padding: 5px 0px 0px;
+                        position: relative;
+
+                        @media screen and (min-width: 1200px) {
+                          margin-bottom: 10px;
+                        }
+
+                        &:before {
+                          position: absolute;
+                          content: "";
+                          left: 0;
+                          top: 10px;
+                          width: 1px;
+                          height: calc(100% - 0.8em);
+                          background-color: rgba(0, 0, 0, 0.1);
+                        }
+
+                        > li {
+                          margin-bottom: 5px;
+
+                          a {
+                            color: #a0a0a0;
+                            display: inline-block;
+                            transition: 150ms;
+                            position: relative;
+                            padding-left: 10px;
+
+                            &:before {
+                              position: absolute;
+                              content: "";
+                              left: 0px;
+                              top: 7%;
+                              height: 0%;
+                              width: 2px;
+                              background: linear-gradient(
+                                to bottom,
+                                lighten($accent-color, 7%),
+                                lighten($accent-color, 3%)
+                              );
+                              transition: 300ms ease-out 50ms;
+                            }
+
+                            &:hover,
+                            &:focus {
+                              text-decoration: none;
+                              text-decoration: none;
+                              color: $accent-color;
+                              outline: none;
+
+                              &:before {
+                                height: 86%;
+                              }
+                            }
+                          }
+                        }
+                      }
+
+                      a.hidden-category-link {
+                        color: $accent-color;
+                        outline: none;
+                        margin-top: 2px;
+                        font-size: 1rem;
+                        padding-bottom: 2px;
+                        position: relative;
+
+                        &:before {
+                          position: absolute;
+                          content: "";
+                          bottom: 0;
+                          left: 0;
+                          width: 0%;
+                          height: 1px;
+                          background-color: lighten($accent-color, 5%);
+                          transition: 300ms ease-out;
+                        }
+
+                        &:hover,
+                        &:focus {
+                          text-decoration: none;
+                          outline: none;
+
+                          &:before {
+                            width: 100%;
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
 
                 .banner-container {
@@ -856,56 +986,11 @@
             }
           }
         }
-        // .right-links {
-        //   .nav-item {
-        //     &:last-child {
-        //       &:after {
-        //         display: none;
-        //       }
-        //     }
-        //   }
-        // }
       }
     }
 
     .banner-container {
       display: none;
-    }
-  }
-
-  @media screen and (max-width: 639px) {
-    .navbar-elements {
-      width: 100%;
-      padding: 0px 10px;
-      height: 80px;
-
-      .brand {
-        height: 80px;
-      }
-
-      .icon-container {
-        .mobile-search-button {
-          margin-right: 4.5vw;
-
-          img {
-            width: 7vw;
-            max-width: 34px;
-          }
-        }
-
-        .cart {
-          .badge {
-            font-size: 0.75rem;
-            width: 15px;
-            height: 15px;
-          }
-
-          img {
-            width: 8vw;
-            max-width: 38px;
-          }
-        }
-      }
     }
 
     .contact-menu {
@@ -995,6 +1080,42 @@
             &:last-child {
               margin-right: 0px;
             }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 639px) {
+    .navbar-elements {
+      width: 100%;
+      padding: 0px 10px;
+      height: 80px;
+
+      .brand {
+        height: 80px;
+      }
+
+      .icon-container {
+        .mobile-search-button {
+          margin-right: 4.5vw;
+
+          img {
+            width: 7vw;
+            max-width: 34px;
+          }
+        }
+
+        .cart {
+          .badge {
+            font-size: 0.75rem;
+            width: 15px;
+            height: 15px;
+          }
+
+          img {
+            width: 8vw;
+            max-width: 38px;
           }
         }
       }
