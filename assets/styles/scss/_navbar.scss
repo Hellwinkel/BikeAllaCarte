@@ -365,6 +365,14 @@
           justify-content: space-between;
           position: relative;
 
+          &.centered {
+            justify-content: center;
+
+            .highlight {
+              background-color: transparent !important;
+            }
+          }
+
           .left-links,
           .right-links {
             display: flex;
