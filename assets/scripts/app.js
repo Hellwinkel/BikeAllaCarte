@@ -285,7 +285,7 @@ new Swiper('#main-slider', {
   slidesPerGroup: 1,
   slidesPerView: 1,
   spaceBetween: 0,
-  simulateTouch: false,
+  simulateTouch: true,
   followFinger: true,
   autoplay: {
     disableOnInteraction: false,
@@ -296,4 +296,5 @@ new Swiper('#main-slider', {
     nextEl: '#main-slider-swiper-next',
     prevEl: '#main-slider-swiper-prev'
   },
+  grabCursor: true,
 })

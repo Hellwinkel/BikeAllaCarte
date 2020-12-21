@@ -809,7 +809,12 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 1fr;
+      height: 80px;
       gap: 10px;
+
+      .brand {
+        height: 80px;
+      }
 
       .custom-toggler {
         width: 40px;
@@ -1171,11 +1176,6 @@
     .navbar-elements {
       width: 100%;
       padding: 0px 10px;
-      height: 80px;
-
-      .brand {
-        height: 80px;
-      }
 
       .icon-container {
         .mobile-search-button {
