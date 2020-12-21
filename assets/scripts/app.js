@@ -278,7 +278,9 @@ function toggleMobileMenu() {
   const nav = $('.navbar-custom')
 
   if((currentScroll - scrollTop) > 0) {
-    nav.addClass('hidden-navbar')
+    if($(window).scrollTop > 80) {
+      nav.addClass('hidden-navbar')
+    }
   } else {
     nav.removeClass('hidden-navbar')
   }
