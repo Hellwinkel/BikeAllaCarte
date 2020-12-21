@@ -237,7 +237,9 @@ if(window.matchMedia('screen and (min-width: 1200px)').matches) {
     },
     onHide() {
       toggleFilter(false)
-    }
+    },
+    trigger: "mouseenter focusin",
+    hideOnClick: false
   })
 }
 
