@@ -8,6 +8,8 @@
   padding-bottom: 50px;
   z-index: 550;
   position: relative;
+  transition: 150ms;
+  top: 0;
 
   @media screen and (max-width: 1199px) {
     padding-bottom: 0px;
@@ -1218,6 +1220,12 @@
           transform: translateY(-2px);
         }
       }
+    }
+  }
+
+  @media screen and (max-width: 1199px) {
+    &.hidden-navbar {
+      top: -80px;
     }
   }
 }

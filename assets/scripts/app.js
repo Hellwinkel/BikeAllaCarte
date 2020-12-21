@@ -1,5 +1,6 @@
 let filterController = 0
 let overflowController = 0
+let scrollTop = 0
 
 $(document).ready(function () {
 
@@ -271,3 +272,18 @@ function toggleOverflow(add) {
     }
   }
 }
+
+function toggleMobileMenu() {
+  let currentScroll = $(window).scrollTop()
+  const nav = $('.navbar-custom')
+
+  if((currentScroll - scrollTop) > 0) {
+    nav.addClass('hidden-navbar')
+  } else {
+    nav.removeClass('hidden-navbar')
+  }
+
+  scrollTop = currentScroll
+}
+
+$(window).scroll(toggleMobileMenu)
