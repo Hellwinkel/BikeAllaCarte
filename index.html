@@ -7,6 +7,7 @@
   <title>Bike Alla Carte</title>
   <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
   <link rel="stylesheet" href="assets/styles/swiper.min.css">
+  <link rel="stylesheet" href="assets/styles/shift-away.css">
   <link rel="stylesheet" href="assets/styles/style.css">
 
   <!-- Hotjar Tracking Code for bikeallacarte.hellcorp.com.br -->
@@ -73,9 +74,40 @@
           <img src="assets/img/bac-cart-icon.svg" alt="" class="icon">
           <span class="badge show">3</span>
         </a>
-        <a href="" class="help-center show-for-desktop">
+        <div class="help-center show-for-desktop" tabindex="0">
           <img src="assets/img/bac-help-center-icon.svg" alt="" class="icon">
-        </a>
+        </div>
+        <div id="tippy-content" style="display: none; overflow: hidden; width: 0px; height: 0px;">
+          <div class="help-center-container">
+            <h2 class="help-center-title">
+              Atendimento
+            </h2>
+            <div class="phone-container">
+              <a href="#" class="phone-number">
+                (41) 3042-5807
+              </a>
+              <p class="phone-description">
+                Curitiba e região
+              </p>
+              <a href="#" class="phone-number">
+                (41) 3018-9003
+              </a>
+              <p class="phone-description">
+                Televendas
+              </p>
+            </div>
+            <h2 class="help-center-title social">
+              Social
+            </h2>
+            <div class="social-container">
+              <a href="#" class="icon" style="background-image: url('assets/img/mobile-whatsapp.svg')"></a>
+              <a href="#" class="icon" style="background-image: url('assets/img/mobile-facebook.svg')"></a>
+              <a href="#" class="icon" style="background-image: url('assets/img/mobile-instagram.svg')"></a>
+              <a href="#" class="icon" style="background-image: url('assets/img/mobile-youtube.svg')"></a>
+              <a href="#" class="icon" style="background-image: url('assets/img/mobile-email.svg')"></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="menu-options">
@@ -1136,6 +1168,8 @@
 
   <script src="assets/scripts/jquery.min.js"></script>
   <script src="assets/scripts/bootstrap.min.js"></script>
+  <script src="assets/scripts/popper.min.js"></script>
+  <script src="assets/scripts/tippy.min.js"></script>
   <script src="assets/scripts/swiper.min.js"></script>
   <script src="assets/scripts/parallax.min.js"></script>
   <script src="assets/scripts/app.js"></script>

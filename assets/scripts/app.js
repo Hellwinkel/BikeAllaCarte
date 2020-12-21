@@ -1,3 +1,6 @@
+let filterController = 0
+let overflowController = 0
+
 $(document).ready(function () {
 
   // Fix VH in mobile devices
@@ -174,33 +177,27 @@ $(window).scroll(function() {
   });
 }
 
-function toggleSearchBox() {
-  $('.form-inline').toggleClass('show')
-  $('.filter').toggleClass('show')
-  $('.mobile-search-button').toggleClass('show')
-  
-  if(!$('.navbar-toggler').hasClass('collapsed')) {
-    $('.navbar-toggler').click()
-  }
+function openSearchBox() {
+  $('.form-inline').addClass('show')
+  toggleFilter(true)
+  toggleOverflow(true)
+  $('.mobile-search-button').removeClass('show')
 }
 
-// $("body").on("mouseover", ".navbar-nav .dropdown", function (e) {
-//   $(e.target).dropdown("show");
-//   toggleFilter(true);
-// });
-
-// $("body").on("mouseout", ".navbar-nav .dropdown", function (e) {
-//   $(e.target).dropdown("hide");
-//   toggleFilter(false);
-// });
+function closeSearchBox() {
+  $('.form-inline').removeClass('show')
+  toggleFilter(false)
+  toggleOverflow(false)
+  $('.mobile-search-button').addClass('show')
+}
 
 $(".navbar-nav .dropdown").on("show.bs.dropdown", function () {
-  $(".filter").toggleClass('show')
+  toggleFilter(true)
   $(this).find(".dropdown-menu a").attr("tabindex", 0);
 });
 
 $(".navbar-nav .dropdown").on("hidden.bs.dropdown", function () {
-  $(".filter").toggleClass('show')
+  toggleFilter(false)
   $(this).find(".dropdown-menu a").attr("tabindex", -1);
 });
 
@@ -210,17 +207,67 @@ $(".dropdown-menu").on("click.bs.dropdown", function (e) {
 });
 
 $(".collapse").on('show.bs.collapse', function () {
-  $('body').addClass('hidden-overflow')
+  toggleOverflow(true)
 })
 
 $(".collapse").on('hidden.bs.collapse', function () {
-  $('body').removeClass('hidden-overflow')
+  toggleOverflow(false)
 })
 
-$('.mobile-search-button.show').on('click', toggleSearchBox)
-$('button.close-search').on('click', toggleSearchBox)
+$('.mobile-search-button.show').on('click', openSearchBox)
+$('button.close-search').on('click', closeSearchBox)
 $('.filter').on('click', function() {
-  if(window.matchMedia('screen and (max-width: 1199px)').matches) {
-    toggleSearchBox()
-  }
+    closeSearchBox()
 })
+
+const tippyContent = document.getElementById('tippy-content')
+
+if(window.matchMedia('screen and (min-width: 1200px)').matches) {
+  tippy('.help-center', {
+    allowHTML: true,
+    content: tippyContent.innerHTML,
+    interactive: true,
+    theme: 'tooltip-style',
+    arrow: true,
+    animation: 'shift-away',
+    interactiveBorder: 20,
+    onShow() {
+      toggleFilter(true)
+    },
+    onHide() {
+      toggleFilter(false)
+    }
+  })
+}
+
+function toggleFilter(show) {
+  if(show) {
+    $('.filter').addClass('show')
+    filterController++
+  } else {
+    if(filterController === 1) {
+      filterController--
+      $('.filter').removeClass('show')
+    }
+    
+    if(filterController > 1) {
+      filterController--
+    }
+  }
+}
+
+function toggleOverflow(add) {
+  if(add) {
+    $('body').addClass('hidden-overflow')
+    overflowController++
+  } else {
+    if(overflowController === 1) {
+      overflowController--
+      $('body').removeClass('hidden-overflow')
+    }
+
+    if(overflowController > 1) {
+      overflowController--
+    }
+  }
+}
