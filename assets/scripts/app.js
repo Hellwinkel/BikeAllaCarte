@@ -23,29 +23,16 @@ $(document).ready(function () {
   // --------------
 });
 
-$(window).resize(function() {
+$(window).resize(function () {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 })
 
-$(window).scroll(function() {
+$(window).scroll(function () {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 })
 
-{
-  let mainSlider = new Swiper(".swiper-container#main-slider", {
-    loop: true,
-    slidesPerGroup: 1,
-    slidesPerView: 1,
-    speed: 500,
-    cssMode: true,
-    autoplay: {
-      disableOnInteraction: false,
-      delay: 3600,
-    },
-  });
-}
 
 // Brand swiper
 {
@@ -217,13 +204,13 @@ $(".collapse").on('hidden.bs.collapse', function () {
 
 $('.mobile-search-button.show').on('click', openSearchBox)
 $('button.close-search').on('click', closeSearchBox)
-$('.filter').on('click', function() {
-    closeSearchBox()
+$('.filter').on('click', function () {
+  closeSearchBox()
 })
 
 const tippyContent = document.getElementById('tippy-content')
 
-if(window.matchMedia('screen and (min-width: 1200px)').matches) {
+if (window.matchMedia('screen and (min-width: 1200px)').matches) {
   tippy('.help-center', {
     allowHTML: true,
     content: tippyContent.innerHTML,
@@ -244,32 +231,32 @@ if(window.matchMedia('screen and (min-width: 1200px)').matches) {
 }
 
 function toggleFilter(show) {
-  if(show) {
+  if (show) {
     $('.filter').addClass('show')
     filterController++
   } else {
-    if(filterController === 1) {
+    if (filterController === 1) {
       filterController--
       $('.filter').removeClass('show')
     }
-    
-    if(filterController > 1) {
+
+    if (filterController > 1) {
       filterController--
     }
   }
 }
 
 function toggleOverflow(add) {
-  if(add) {
+  if (add) {
     $('body').addClass('hidden-overflow')
     overflowController++
   } else {
-    if(overflowController === 1) {
+    if (overflowController === 1) {
       overflowController--
       $('body').removeClass('hidden-overflow')
     }
 
-    if(overflowController > 1) {
+    if (overflowController > 1) {
       overflowController--
     }
   }
@@ -279,8 +266,8 @@ function toggleMobileMenu() {
   let currentScroll = $(window).scrollTop()
   const nav = $('.navbar-custom')
 
-  if((currentScroll - scrollTop) > 0) {
-    if($(window).scrollTop() > 80) {
+  if ((currentScroll - scrollTop) > 0) {
+    if ($(window).scrollTop() > 80) {
       nav.addClass('hidden-navbar')
     }
   } else {
@@ -291,3 +278,22 @@ function toggleMobileMenu() {
 }
 
 $(window).scroll(toggleMobileMenu)
+
+new Swiper('#main-slider', {
+  centeredSlides: true,
+  loop: true,
+  slidesPerGroup: 1,
+  slidesPerView: 1,
+  spaceBetween: 0,
+  simulateTouch: false,
+  followFinger: true,
+  autoplay: {
+    disableOnInteraction: false,
+    delay: 3200,
+  },
+  speed: 1200,
+  navigation: {
+    nextEl: '#main-slider-swiper-next',
+    prevEl: '#main-slider-swiper-prev'
+  },
+})
