@@ -609,22 +609,27 @@
       </div>
     </div>
 
-    <div class="main-slider">
-      <div class="swiper-container" id="main-slider">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
+    <div class="main-slider-container">
+      <div id="main-slider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+          <li data-target="#main-slider" data-slide-to="1"></li>
+          <li data-target="#main-slider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="5000">
             <picture>
               <source media="(min-width:501px" srcset="assets/img/banner-desktop.png">
               <img src="assets/img/banner-mobile.png" alt="">
             </picture>
           </div>
-          <div class="swiper-slide">
+          <div class="carousel-item" data-interval="5000">
             <picture>
               <source media="(min-width:501px" srcset="assets/img/banner-desktop.png">
               <img src="assets/img/banner-mobile.png" alt="">
             </picture>
           </div>
-          <div class="swiper-slide">
+          <div class="carousel-item" data-interval="5000">
             <picture>
               <source media="(min-width:501px" srcset="assets/img/banner-desktop.png">
               <img src="assets/img/banner-mobile.png" alt="">
@@ -632,8 +637,12 @@
           </div>
         </div>
       </div>
-      <div class="swiper-arrow swiper-custom-button-prev" id="main-slider-swiper-prev"></div>
-      <div class="swiper-arrow swiper-custom-button-next" id="main-slider-swiper-next"></div>
+      <a class="carousel-control-prev carousel-custom-button-prev" href="#main-slider" role="button" data-slide="prev">
+        <span class="sr-only">Retornar slide</span>
+      </a>
+      <a class="carousel-control-next carousel-custom-button-next" href="#main-slider" role="button" data-slide="next">
+        <span class="sr-only">Avançar slide</span>
+      </a>
     </div>
 
     <div class="module">

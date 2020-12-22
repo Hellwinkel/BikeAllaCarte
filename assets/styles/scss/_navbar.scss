@@ -252,6 +252,7 @@
             color: lighten($accent-color, 5%);
             letter-spacing: -0.02em;
             font-weight: 500;
+            margin-bottom: 0px;
           }
 
           .account-link {
@@ -445,8 +446,9 @@
                 justify-content: space-between;
                 overflow: hidden;
                 transition: 100ms;
-                max-height: calc(90vh - 150px);
+                max-height: calc(92vh - 150px);
                 overflow-y: auto;
+                margin: 0px;
 
                 &.show {
                   padding: 25px 30px;

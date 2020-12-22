@@ -278,23 +278,3 @@ function toggleMobileMenu() {
 }
 
 $(window).scroll(toggleMobileMenu)
-
-new Swiper('#main-slider', {
-  centeredSlides: true,
-  loop: true,
-  slidesPerGroup: 1,
-  slidesPerView: 1,
-  spaceBetween: 0,
-  simulateTouch: true,
-  followFinger: true,
-  autoplay: {
-    disableOnInteraction: false,
-    delay: 3200,
-  },
-  speed: 1200,
-  navigation: {
-    nextEl: '#main-slider-swiper-next',
-    prevEl: '#main-slider-swiper-prev'
-  },
-  grabCursor: false,
-})

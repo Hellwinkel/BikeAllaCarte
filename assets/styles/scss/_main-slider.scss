@@ -1,30 +1,108 @@
-.main-slider {
-  width: 100%;
-  margin-bottom: 45px;
+.main-slider-container {
   position: relative;
   display: flex;
+  flex-flow: row;
   align-items: center;
   justify-content: space-between;
-
-  @media screen and (min-width: 501px) and (max-width: 939px) {
-    * {
-      display: none;
-    }
-  }
+  margin-bottom: 45px;
 
   #main-slider {
-    width: 100%;
+    max-width: 100%;
 
-    img {
-      max-width: 100%;
+    picture {
+      img {
+        max-width: 100%;
+      }
     }
   }
 
-  .swiper-custom-button-prev {
-    margin-left: 30px;
+  .carousel-custom-button-prev,
+  .carousel-custom-button-next {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    z-index: 25;
+    border-radius: 50%;
+    background-image: url('../img/slider-arrow.svg');
+    background-position-y: center;
+    background-position-x: calc(50% + 2px);
+    background-size: 30%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.35;
+    outline: none;
+    transition: 150ms ease-out;
+    top: calc(50% - 20px);
+
+    @media screen and (max-width: 425px) {
+      width: 35px;
+      height: 35px;
+      box-shadow: none;
+      background-size: 40%;
+      opacity: 0.6;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    &:hover {
+      box-shadow: 0px 0px 0px 3px rgba(101, 101, 101, 0.35) inset;
+      opacity: 0.6;
+    }
   }
 
-  .swiper-custom-button-next {
-    margin-right: 30px;
+  .carousel-custom-button-prev {
+    transform: rotate(180deg);
+    left: 30px;
+
+    @media screen and (max-width: 500px) {
+      left: 10px;
+      opacity: 0.35;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .carousel-custom-button-next {
+    right: 30px;
+
+    @media screen and (max-width: 500px) {
+      right: 10px;
+      opacity: 0.35;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+
+  .carousel-indicators {
+    margin-bottom: 5px;
+
+    li {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 0%;
+        background-color: lighten($accent-color, 5%);
+        transition: 200ms linear;
+      }
+      
+      &.active {
+
+        &:after {
+          width: 100%;
+          transition: 750ms linear 4250ms;
+        }
+      }
+    }
   }
 }
