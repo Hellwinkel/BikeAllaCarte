@@ -92,15 +92,15 @@
         top: 0;
         height: 100%;
         width: 0%;
-        background-color: lighten($accent-color, 5%);
-        transition: 200ms linear;
+        background-color: lighten($accent-color, 3%);
+        transition: 200ms ease-out;
       }
       
       &.active {
 
         &:after {
           width: 100%;
-          transition: 750ms linear 4250ms;
+          transition: 750ms ease-out 4250ms;
         }
       }
     }
