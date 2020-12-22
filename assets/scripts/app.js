@@ -296,5 +296,5 @@ new Swiper('#main-slider', {
     nextEl: '#main-slider-swiper-next',
     prevEl: '#main-slider-swiper-prev'
   },
-  grabCursor: true,
+  grabCursor: false,
 })
