@@ -7,7 +7,6 @@ $(document).ready(function () {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-
   // -------------- Apagar quando função PHP que restringe o tamanho do nome do produto estiver funcionando
   $(".swiper-slide .item-title").each(function () {
     $(this).text(limitProductName($(this).text().trim()));
@@ -279,3 +278,32 @@ function toggleMobileMenu() {
 }
 
 $(window).scroll(toggleMobileMenu)
+
+function toggleDropdown (e) {
+  const dropdown = $(e.target).closest('.dropdown')
+  const menu = $('.dropdown-menu', dropdown)
+
+  function openMenu (){
+    const shouldOpen = e.type !== 'click' && dropdown.is(':hover')
+
+    if(shouldOpen) {
+      menu.addClass('show');
+      dropdown.addClass('show');
+      $('[data-toggle="dropdown"]', dropdown).attr('aria-expanded', true);
+      toggleFilter(true)
+      dropdown.find("a").attr("tabindex", 0);
+    } else {
+      menu.removeClass('show');
+      dropdown.removeClass('show');
+      $('[data-toggle="dropdown"]', dropdown).attr('aria-expanded', false);
+      toggleFilter(false)
+      dropdown.find("a").attr("tabindex", -1);
+    }
+  };
+
+  openMenu()
+}
+
+$('body')
+  .on('mouseenter mouseleave','.dropdown', toggleDropdown)
+  .on('click', '.dropdown-menu a', toggleDropdown);
