@@ -526,10 +526,14 @@
       gap: 45px 30px;
       position: relative;
       padding: 0px 40px;
-
+      
       @media screen and (max-width: 700px) {
         gap: 60px 30px;
         padding: 0px;
+      }
+      
+      @media screen and (max-width: 350px) {
+        grid-template-columns: 1fr !important;
       }
 
       .item-container {
