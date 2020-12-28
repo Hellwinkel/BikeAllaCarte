@@ -889,18 +889,22 @@
           border: none;
           opacity: 0;
           transition: 150ms;
+          width: 0px;
+          transform: scale(0);
 
           img {
-            width: 32px;
+            width: 100%;
           }
-
+          
           &:hover,
           &:focus {
             outline: none;
           }
-
+          
           &.show {
             opacity: 1;
+            transform: scale(1);
+            width: 32px;
           }
         }
 
