@@ -181,11 +181,13 @@ function closeSearchBox() {
 
 $(".navbar-nav .dropdown").on("show.bs.dropdown", function () {
   toggleFilter(true)
+  toggleOverflow(true)
   $(this).find(".dropdown-menu a").attr("tabindex", 0);
 });
 
 $(".navbar-nav .dropdown").on("hidden.bs.dropdown", function () {
   toggleFilter(false)
+  toggleOverflow(false)
   $(this).find(".dropdown-menu a").attr("tabindex", -1);
 });
 
