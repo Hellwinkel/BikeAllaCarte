@@ -45,7 +45,7 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
   width: 100%;
   height: 0px;
 
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1200px) {
     height: 80px;
   }
 }
@@ -121,7 +121,7 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
   }
 
   .show-for-desktop {
-    @media screen and (max-width: 1199px) {
+    @media screen and (max-width: 1200px) {
       display: none !important;
     }
   }
