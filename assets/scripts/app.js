@@ -193,7 +193,7 @@ $(".navbar-nav .dropdown").on("hidden.bs.dropdown", function () {
 
 $(".dropdown-menu").on("click.bs.dropdown", function (e) {
   e.stopPropagation();
-  e.preventDefault();
+  // e.preventDefault();
 });
 
 $(".collapse").on('show.bs.collapse', function () {
