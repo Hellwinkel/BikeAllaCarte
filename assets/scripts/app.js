@@ -284,7 +284,7 @@ function toggleDropdown (e) {
     const dropdown = $(e.target).closest('.dropdown')
     const menu = $('.dropdown-menu', dropdown)
 
-    function openMenu (){
+    setTimeout (function() {
       const shouldOpen = e.type !== 'click' && dropdown.is(':hover')
 
       if(shouldOpen) {
@@ -300,12 +300,27 @@ function toggleDropdown (e) {
         toggleFilter(false)
         dropdown.find("a").attr("tabindex", -1);
       }
-    };
+    }, e.type === 'mouseleave' ? 100 : 0)
   }
-
-  openMenu()
 }
 
-$('body')
-  .on('mouseenter mouseleave','.dropdown', toggleDropdown)
-  .on('click', '.dropdown-menu a', toggleDropdown);
+let timer
+
+$('body').on('mouseenter', '.dropdown', function(e) {
+  timer = setTimeout(function() {
+    if (e.target.getAttribute('aria-expanded') !== 'true') {
+      toggleDropdown(e)
+    }
+  }, 100)
+})
+
+$('body').on('mouseleave', '.dropdown', function(e) {
+  clearTimeout(timer)
+  toggleDropdown(e)
+})
+
+$('.nav-item').on('click', function(e) {
+  if(e.screenX !== 0) {
+    e.stopPropagation()
+  }
+})

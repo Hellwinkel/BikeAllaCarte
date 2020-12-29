@@ -82,12 +82,14 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
     opacity: 0;
     background-color: rgba(0, 0, 0, 0);
     z-index: 500;
+    transition-delay: 50ms;
     
     &.show {
       opacity: 1;
       height: 100%;
       background-color: rgba(0, 0, 0, 0.35);
       backdrop-filter: blur(10px);
+      transition-delay: 0ms;
     }
   }
 
