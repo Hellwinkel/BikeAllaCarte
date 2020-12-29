@@ -10,7 +10,7 @@
   padding: 3px;
   overflow: hidden;
   transition: 250ms;
-  padding: 8px 10px;
+  padding: 10px;
 
   .lgpd {
     width: 100%;
@@ -122,6 +122,7 @@
           border-radius: 8px;
           letter-spacing: 0.02em;
           animation: pulseButton 1500ms infinite;
+          transition: 200ms;
 
           &:before {
             display: none;
@@ -197,7 +198,7 @@
         box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 1);
         border-radius: 8px;
         letter-spacing: 0.02em;
-        transition: 250ms;
+        transition: 200ms;
         margin-left: 15px;
 
         &:before {
@@ -228,6 +229,12 @@
         }
       }
     }
+  }
+
+  &.destroy {
+    transform: scale(0);
+    bottom: 0;
+    opacity: 0;
   }
 }
 

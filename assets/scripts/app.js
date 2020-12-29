@@ -350,3 +350,9 @@ $('.filter').on('click', function() {
     toggleOverflow(false)
   }
 })
+
+function destroyLGPD() {
+  $('.lgpd-container').addClass('destroy')
+  toggleFilter(false)
+  toggleOverflow(false)
+}
