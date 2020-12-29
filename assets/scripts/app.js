@@ -168,6 +168,7 @@ function openSearchBox() {
   toggleFilter(true)
   toggleOverflow(true)
   $('.mobile-search-button').removeClass('show')
+  $('.lgpd-container').addClass('low-index')
 }
 
 function closeSearchBox() {
@@ -175,6 +176,7 @@ function closeSearchBox() {
   toggleFilter(false)
   toggleOverflow(false)
   $('.mobile-search-button').addClass('show')
+  $('.lgpd-container').removeClass('low-index')
 }
 
 $(".navbar-nav .dropdown").on("show.bs.dropdown", function () {
@@ -194,11 +196,11 @@ $(".dropdown-menu").on("click.bs.dropdown", function (e) {
   // e.preventDefault();
 });
 
-$(".collapse").on('show.bs.collapse', function () {
+$(".navbar-collapse").on('show.bs.collapse', function () {
   toggleOverflow(true)
 })
 
-$(".collapse").on('hidden.bs.collapse', function () {
+$(".navbar-collapse").on('hidden.bs.collapse', function () {
   toggleOverflow(false)
 })
 
@@ -320,7 +322,31 @@ $('body').on('mouseleave', '.dropdown', function(e) {
 })
 
 $('.nav-item').on('click', function(e) {
-  if(e.screenX !== 0) {
+  if(e.screenX !== 0 && window.matchMedia('screen and (min-width: 1200px)').matches) {
     e.stopPropagation()
+  } else {
+    toggleDropdown(e)
+  }
+})
+
+$(".lgpd-collapse").on('show.bs.collapse', function () {
+  $('.lgpd-container').addClass('show')
+  toggleFilter(true)
+  toggleOverflow(true)
+  
+})
+
+$(".lgpd-collapse").on('hide.bs.collapse', function () {
+  $('.lgpd-container').removeClass('show')
+  toggleFilter(false)
+  toggleOverflow(false)
+})
+
+$('.filter').on('click', function() {
+  if($('.lgpd-container').hasClass('show')) {
+    $('.lgpd-collapse').collapse('toggle')
+    $('.lgpd-container').removeClass('show')
+    toggleFilter(false)
+    toggleOverflow(false)
   }
 })
