@@ -31,14 +31,13 @@
         height: 100%; 
 
         // BAC
-        // max-height: 100px;
+        max-height: 100px;
 
         // BSB
-        max-height: 60px;
-
-        @media screen and (max-width: 639px) {
-          max-height: 50px;
-        }
+        // max-height: 60px;
+        // @media screen and (max-width: 639px) {
+        //   max-height: 50px;
+        // }
       }
     }
 
@@ -69,19 +68,19 @@
         transition: 150ms;
 
         //BAC 
-        // @media screen and (min-width: 1200px) {
-        //   box-shadow: none !important;
-        // }
+        @media screen and (min-width: 1200px) {
+          box-shadow: none !important;
+        }
 
         // BSB
-        box-shadow: 0px 0px 0px 1px transparentize($accent-color, 0.4);
+        // box-shadow: 0px 0px 0px 1px transparentize($accent-color, 0.4);
 
         &:focus {
           // BAC
-          // box-shadow: 0px 0px 0px 2px transparentize(lighten($accent-color, 25%), 0.4);
+          box-shadow: 0px 0px 0px 2px transparentize(lighten($accent-color, 25%), 0.4);
           
           // BSB
-          box-shadow: 0px 0px 0px 2px transparentize($accent-color, 0.2);
+          // box-shadow: 0px 0px 0px 2px transparentize($accent-color, 0.2);
         }
       }
 
@@ -336,10 +335,10 @@
           transform: scale(0);
 
           // BAC
-          // box-shadow: 0px 1px 6px 1px $badge-color;
+          box-shadow: 0px 1px 6px 1px $badge-color;
           
           // BSB
-          box-shadow: 0px 1px 6px 1px transparentize($badge-color, 0.55);
+          // box-shadow: 0px 1px 6px 1px transparentize($badge-color, 0.55);
 
           &.show {
             animation: showBadge 200ms forwards 1000ms;

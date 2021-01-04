@@ -6,19 +6,6 @@ $(document).ready(function () {
   // Fix VH in mobile devices
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-  // -------------- Apagar quando função PHP que restringe o tamanho do nome do produto estiver funcionando
-  $(".swiper-slide .item-title").each(function () {
-    $(this).text(limitProductName($(this).text().trim()));
-  });
-  function limitProductName(productName) {
-    if (productName.length > 58) {
-      return productName.substring(0, 55) + "...";
-    } else {
-      return productName;
-    }
-  }
-  // --------------
 });
 
 $(window).resize(function () {
@@ -124,24 +111,37 @@ $(window).scroll(function () {
       element.siblings().addClass("blur");
     } else {
       $(".swiper-slide").removeClass("blur");
+      $(".item-container").removeClass("blur");
     }
   }
 
-  $(".swiper-slide").on("focusin", function () {
-    focusProduct($(this));
-  });
+  $(".swiper-slide")
+    .on("focusin", function () {
+      focusProduct($(this));
+    })
+    .on("focusout", function () {
+      focusProduct();
+    })
+    .on("mouseover", function () {
+      focusProduct($(this));
+    })
+    .on("mouseout", function () {
+      focusProduct();
+    });
 
-  $(".swiper-slide").on("focusout", function () {
-    focusProduct();
-  });
-
-  $(".swiper-slide").on("mouseover", function () {
-    focusProduct($(this));
-  });
-
-  $(".swiper-slide").on("mouseout", function () {
-    focusProduct();
-  });
+  $(".grid-module .item-container")
+    .on("focusin", function () {
+      focusProduct($(this));
+    })
+    .on("focusout", function () {
+      focusProduct();
+    })
+    .on("mouseover", function () {
+      focusProduct($(this));
+    })
+    .on("mouseout", function () {
+      focusProduct();
+    });
 }
 
 // Create hover effect on module button
@@ -302,7 +302,7 @@ function toggleDropdown (e) {
         toggleFilter(false)
         dropdown.find("a").attr("tabindex", -1);
       }
-    }, e.type === 'mouseleave' ? 100 : 0)
+    }, e.type === 'mouseleave' ? 0 : 0)
   }
 }
 
@@ -313,7 +313,7 @@ $('body').on('mouseenter', '.dropdown', function(e) {
     if (e.target.getAttribute('aria-expanded') !== 'true') {
       toggleDropdown(e)
     }
-  }, 100)
+  }, 0)
 })
 
 $('body').on('mouseleave', '.dropdown', function(e) {
