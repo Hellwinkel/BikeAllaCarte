@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 // BAC
-$primary-color: #0dc70e; 
-$secondary-color: #222222;
-$third-color: #222222;
-$accent-color: #0dc70e;
-$main-text: #f7f7f7;
-$main-link: #f7f7f7;
-$badge-color: #FF1D1D;
-$png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(115%) contrast(90%);
+// $primary-color: #0dc70e; 
+// $secondary-color: #222222;
+// $third-color: #222222;
+// $accent-color: #0dc70e;
+// $main-text: #f7f7f7;
+// $main-link: #f7f7f7;
+// $badge-color: #FF1D1D;
+// $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(115%) contrast(90%);
 
 // BSB
-// $primary-color: #1f1f1f; 
-// $secondary-color: #f7f7f7;
-// $third-color: #222222;
-// $accent-color: #fa2626;
-// $main-text: #222222;
-// $main-link: #fa2626;
-// $badge-color: #222222;
-// $png-color: invert(18%) sepia(68%) saturate(4223%) hue-rotate(350deg) brightness(123%) contrast(96%);
+$primary-color: #1f1f1f; 
+$secondary-color: #f7f7f7;
+$third-color: #222222;
+$accent-color: #fa2626;
+$main-text: #222222;
+$main-link: #fa2626;
+$badge-color: #222222;
+$png-color: invert(18%) sepia(68%) saturate(4223%) hue-rotate(350deg) brightness(123%) contrast(96%);
 
 ::-webkit-scrollbar {
   width: 0px;
