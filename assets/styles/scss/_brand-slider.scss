@@ -1,6 +1,8 @@
 .brand-container {
+  position: relative;
   width: 100%;
   padding: 20px 60px;
+  z-index: 140;
 
   @media screen and (max-width: 639px) {
     display: none;
