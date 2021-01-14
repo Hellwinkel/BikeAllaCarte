@@ -3,6 +3,8 @@ let overflowController = 0
 let scrollTop = 0
 
 $(document).ready(function () {
+  toggleWppButton()
+
   // Fix VH in mobile devices
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -355,4 +357,12 @@ function destroyLGPD() {
   $('.lgpd-container').addClass('destroy')
   toggleFilter(false)
   toggleOverflow(false)
+  toggleWppButton()
+}
+
+// Show WhatsApp button only if LGPD is accepted
+function toggleWppButton() {
+  if ($('.lgpd-container')[0] === undefined || $('.lgpd-container').hasClass('destroy')) {
+    $('.whatsapp-button').removeClass('hidden')
+  }
 }
