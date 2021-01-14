@@ -215,6 +215,7 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
     @import 'product-module';
     @import 'parallax';
     @import 'image-grid';
+    @import 'small-image-grid';
     @import 'newsletter';
     @import 'footer';
   }
