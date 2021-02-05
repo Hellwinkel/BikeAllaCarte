@@ -5,6 +5,12 @@ let scrollTop = 0
 $(document).ready(function () {
   toggleWppButton()
 
+  $('.item-title').each(function () {
+    if ($(this).html().trim().length > 46) {
+      $(this).addClass('lower-title')
+    }
+  })
+
   // Fix VH in mobile devices
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
