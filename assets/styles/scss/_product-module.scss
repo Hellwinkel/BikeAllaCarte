@@ -358,6 +358,10 @@
             margin-bottom: 10px;
             max-height: 235px;
             max-width: 300px;
+            
+            @media screen and (max-width: 760px) {
+              max-height: 175px;
+            }
 
             img {
               max-width: 90%;
@@ -620,6 +624,10 @@
             margin-bottom: 10px;
             max-height: 235px;
             max-width: 300px;
+            
+            @media screen and (max-width: 760px) {
+              max-height: 175px;
+            }
 
             img {
               max-width: 90%;

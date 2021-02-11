@@ -14,11 +14,16 @@ $(document).ready(function () {
   // Fix VH in mobile devices
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  // Fix width
+  updateProductWidth()
 });
 
 $(window).resize(function () {
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  updateProductWidth()
 })
 
 $(window).scroll(function () {
@@ -371,4 +376,18 @@ function toggleWppButton() {
   if ($('.lgpd-container')[0] === undefined || $('.lgpd-container').hasClass('destroy')) {
     $('.whatsapp-button').removeClass('hidden')
   }
+}
+
+// Fix width
+
+
+function updateProductWidth() {
+  let firstSlideElementId = $('.module .swiper-arrow[aria-disabled=false]').first().attr('id').split('-')[0]
+  let currentProductWidth = $(`#${firstSlideElementId} .swiper-slide[aria-label^="1 /"]`).width()
+
+  $('.module .swiper-custom-button-next[aria-disabled=true]').each(function() {
+    let currentId = $(this).attr('id').split('-')[0]
+
+    $(`.module #${currentId} .swiper-slide`).width(currentProductWidth)
+  })
 }
