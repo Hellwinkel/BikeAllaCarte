@@ -212,7 +212,9 @@ $png-color: invert(54%) sepia(57%) saturate(5200%) hue-rotate(90deg) brightness(
 
     @import 'brand-slider';
     @import 'main-slider';
-    @import 'product-module';
+    // @import 'product-module';
+    @import 'product-module/main';
+    @import 'product-module/highlight';
     @import 'parallax';
     @import 'image-grid';
     @import 'small-image-grid';

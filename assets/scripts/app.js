@@ -14,9 +14,11 @@ $(document).ready(function () {
   // Fix VH in mobile devices
   let vh = window.innerHeight * 0.01;
   document.documentElement.style.setProperty('--vh', `${vh}px`);
-
+  
   // Fix width
-  updateProductWidth()
+  setTimeout(function() {
+    updateProductWidth()
+  }, 50)
 });
 
 $(window).resize(function () {
@@ -64,10 +66,10 @@ $(window).scroll(function () {
 // Create swiper instance
 {
   // Note: to work, each slider must have a unique ID defined with 'swiper-container' and as part of its navigation arrows
-  $(".swiper-container").each(function () {
-    let id = $(this).attr("id");
+  $(".module").each(function () {
+    let id = $(this).find('.swiper-container').attr("id")
 
-    if ($(this).hasClass("small-swiper")) {
+    if ($(this).hasClass("small") && !$(this).hasClass("grid-module")) {
       new Swiper(`.swiper-container#${id}`, {
         centeredSlides: false,
         loop: false,
@@ -90,29 +92,57 @@ $(window).scroll(function () {
           2495: { slidesPerView: 8 },
         },
       });
-    } else {
-      new Swiper(`.swiper-container#${id}`, {
-        centeredSlides: false,
-        loop: false,
-        slidesPerGroup: 1,
-        slidesPerView: 1,
-        spaceBetween: 25,
-        simulateTouch: false,
-        followFinger: true,
-        navigation: {
-          nextEl: `#${id}-swiper-next`,
-          prevEl: `#${id}-swiper-prev`,
-        },
-        breakpoints: {
-          750: { slidesPerView: 2 },
-          1045: { slidesPerView: 3 },
-          1335: { slidesPerView: 4 },
-          1625: { slidesPerView: 5 },
-          1915: { slidesPerView: 6 },
-          2205: { slidesPerView: 7 },
-          2495: { slidesPerView: 8 },
-        },
-      });
+    }
+
+    if (!$(this).hasClass("grid-module") && !$(this).hasClass("small")) {
+
+      if ($(this).hasClass("highlight")) {
+        new Swiper(`.swiper-container#${id}`, {
+          centeredSlides: true,
+          loop: true,
+          slidesPerGroup: 1,
+          slidesPerView: 1,
+          spaceBetween: 25,
+          simulateTouch: false,
+          followFinger: true,
+          navigation: {
+            nextEl: `#${id}-swiper-next`,
+            prevEl: `#${id}-swiper-prev`,
+          },
+          breakpoints: {
+            750: { slidesPerView: 1 },
+            1045: { slidesPerView: 3 },
+            1335: { slidesPerView: 3 },
+            1625: { slidesPerView: 4 },
+            1915: { slidesPerView: 5 },
+            2205: { slidesPerView: 6 },
+            2495: { slidesPerView: 7 },
+          },
+        });
+      } else {
+        new Swiper(`.swiper-container#${id}`, {
+          centeredSlides: false,
+          loop: false,
+          slidesPerGroup: 1,
+          slidesPerView: 1,
+          spaceBetween: 25,
+          simulateTouch: false,
+          followFinger: true,
+          navigation: {
+            nextEl: `#${id}-swiper-next`,
+            prevEl: `#${id}-swiper-prev`,
+          },
+          breakpoints: {
+            750: { slidesPerView: 2 },
+            1045: { slidesPerView: 3 },
+            1335: { slidesPerView: 4 },
+            1625: { slidesPerView: 5 },
+            1915: { slidesPerView: 6 },
+            2205: { slidesPerView: 7 },
+            2495: { slidesPerView: 8 },
+          },
+        });
+      }
     }
   });
 }
@@ -379,11 +409,28 @@ function toggleWppButton() {
 }
 
 // Fix width
-
-
 function updateProductWidth() {
-  let firstSlideElementId = $('.module .swiper-arrow[aria-disabled=false]').first().attr('id').split('-')[0]
-  let currentProductWidth = $(`#${firstSlideElementId} .swiper-slide[aria-label^="1 /"]`).width()
+  let firstElement = $('.module .swiper-arrow[aria-disabled=false]').first()
+  let firstSlideElementId
+  let currentProductWidth
+
+  if(firstElement[0] !== undefined) {
+    firstSlideElementId = $('.module .swiper-arrow[aria-disabled=false]').first().attr('id').split('-swiper-next')[0]
+    currentProductWidth = $(`#${firstSlideElementId} .swiper-slide[aria-label^="1 /"]`).width()
+  
+    console.log(firstSlideElementId)
+    console.log(currentProductWidth)
+  } else {
+    currentProductWidth = 0
+
+    $('.module').each(function() {
+      if(!$(this).hasClass('grid-module')) {
+        if($(this).find('.swiper-slide').first().width() > currentProductWidth) {
+          currentProductWidth = $(this).find('.swiper-slide').first().width()
+        }
+      }
+    })
+  }
 
   $('.module .swiper-custom-button-next[aria-disabled=true]').each(function() {
     let currentId = $(this).attr('id').split('-')[0]
